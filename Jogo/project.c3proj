@@ -1,0 +1,677 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 39702,
+	"name": "OpalaTech",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Áudio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Teclado",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Fonte de sprites",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Texto",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Mosaico",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Anchor",
+			"name": "Âncora",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Projétil",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Arrastar & Soltar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direções",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Mover Para",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pathfinding",
+			"name": "Explorador de rotas",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Persist",
+			"name": "Persistir",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Atrelar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "TileMovement",
+			"name": "Movimento em grid",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Restrito ao layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Centrar em",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Sólido",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "jzdjutu6sls",
+	"objectTypes": {
+		"items": [
+			"Txt_Lixo_Organico",
+			"Txt_Papel",
+			"Txt_Plastico",
+			"Txt_Vidro",
+			"Texto3"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Mouse",
+					"Teclado",
+					"Áudio"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"cobra",
+							"Spr_Folha",
+							"Spr_Urtiga_Grande",
+							"Spr_Cactus_Grande",
+							"Spr_Cactus_Medio",
+							"Spr_Espinhos_Pequena",
+							"Spr_Poça_Lama",
+							"Spr_Urtiga_Media",
+							"Spr_Urtiga_Seca"
+						],
+						"subfolders": [],
+						"name": "Inimigos"
+					},
+					{
+						"items": [
+							"Spr_Dialogo_Areia",
+							"Spr_Dialogo_Barro",
+							"Spr_Dialogo_Pedra",
+							"Spr_Emoji_1",
+							"Spr_Emoji_2",
+							"Spr_Emoji_3",
+							"Spr_Emoji_4",
+							"Spr_Emoji_5",
+							"Spr_Placa_Jogo_Vida",
+							"Spr_Placa_Pontuação_Areia",
+							"Spr_Placa_Pontuação_Pedra",
+							"Spr_Placa_Pontuação_Terra",
+							"Spr_Pontuação_Pedra_Inv",
+							"Placa_Aumentada",
+							"Rolagem",
+							"Roll_Horizontal",
+							"Roll_Vertical",
+							"Spr_Fundo_Inventario",
+							"Spr_Fundo_Preto",
+							"Spr_Fundo_Selecao_Nivel",
+							"Spr_Game_Over_Areia",
+							"Spr_Game_Over_Pedra",
+							"Spr_Game_Over_Terra",
+							"Spr_Inventario",
+							"Spr_Tela_DEMO",
+							"Spr_Tiro",
+							"Spr_Venceu_Areia",
+							"Spr_Venceu_Pedra",
+							"Spr_Venceu_Terra",
+							"BLOQUEADOR",
+							"Spr_Alvo_Tiro",
+							"Spr_Barra_Tiro",
+							"Spr_Mochila"
+						],
+						"subfolders": [],
+						"name": "UI"
+					},
+					{
+						"items": [
+							"grama1x1",
+							"Spr_Cerca_Horizontal",
+							"Spr_Placa_Aviso",
+							"Spr_Cerca_Diagonal",
+							"Spr_Cerca_1",
+							"garrafa_dagua",
+							"Spr_Arvore_Caida",
+							"Spr_Bloquador",
+							"Spr_NPC_1",
+							"Spr_Lixeira",
+							"FonteDeSprites",
+							"Spr_Agua",
+							"Spr_Bloqueio_Tiro",
+							"Spr_Fogueira",
+							"Spr_Fumaca",
+							"Spr_Isqueiro",
+							"Spr_Madeira_1",
+							"Spr_Madeira_2",
+							"Spr_Madeira_3",
+							"Spr_Madeira_4",
+							"Spr_Madeira_5",
+							"Spr_NPC_2",
+							"Spr_Portal_3Cachu_Cachu_1_para_Cachu_2",
+							"Spr_Portal_3Cachu_Cachu_2_para_Cachu_3",
+							"Spr_Portal_3Cachu_Cachu_3_para_Mapa_Final",
+							"Spr_Portal_Cachu_Potao_Floresta_3_Cachu",
+							"Spr_Portal_CachuUrubu_Venceu",
+							"Spr_X_Fogueira",
+							"Spr_Boia",
+							"Spr_Galho",
+							"Spr_Lixo",
+							"Spr_Parede",
+							"Spr_Personagem_Caminho"
+						],
+						"subfolders": [],
+						"name": "Elementos de Ambiente"
+					},
+					{
+						"items": [
+							"Spr_Portal_3Cachu_1_para_2",
+							"Spr_Portal_3Cachu_2_para_3",
+							"Spr_Portal_3Cachu_3_para_4",
+							"Spr_Portal_3Cachu_4_para_cachu",
+							"Spr_Portal_Potao_1_para_2",
+							"Spr_Portal_Potao_2_3",
+							"Spr_Portal_Potao_3_para_Cachu",
+							"Spr_Portal_Urubu_Rei_1_para_2",
+							"Spr_Portal_Urubu_Rei_2_para_3",
+							"Spr_Portal_Urubu_Rei_3_para_4",
+							"Spr_Portal_Urubu_Rei_4_para_5",
+							"Spr_Portal_Urubu_Rei_5_para_6",
+							"Spr_Portal_Urubu_Rei_6_para_CachuUrubu",
+							"Spr_Portal_Fase_1",
+							"Spr_Portal_Fase_2",
+							"Spr_Portal_Fase_3"
+						],
+						"subfolders": [],
+						"name": "Portais"
+					},
+					{
+						"items": [
+							"Mosaico",
+							"Mosaico2",
+							"Mosaico3",
+							"Mosaico4"
+						],
+						"subfolders": [],
+						"name": "Mosaicos"
+					},
+					{
+						"items": [
+							"Spr_Lixeiro_Metal",
+							"Spr_Lixeiro_Organico",
+							"Spr_Lixeiro_Papel",
+							"Spr_Lixeiro_Plastico",
+							"Spr_Lixeiro_Vidro",
+							"Spr_Lixeiros",
+							"Spr_Lixo_Organico",
+							"Spr_Lixo_Organico_1",
+							"Spr_Lixo_Papel",
+							"Spr_Lixo_Plastico",
+							"Spr_Lixo_Plastico_1",
+							"Spr_Lixo_Plastico_2",
+							"Spr_Lixo_Plastico_3",
+							"Spr_Lixo_Vidro",
+							"Spr_Lixo_Vidro_1"
+						],
+						"subfolders": [],
+						"name": "Lixos"
+					}
+				],
+				"name": "Sprite"
+			},
+			{
+				"items": [
+					"Icone_Pausado",
+					"meio_pista",
+					"observacao",
+					"Valor_Popularidade",
+					"Text_Popularidade",
+					"Text_Comentario",
+					"Text_Distancia_Corrida",
+					"Text_Estamina",
+					"Text_GameOver",
+					"Text_Pausado",
+					"Text_Valor_Distancia",
+					"Valor_Estamina",
+					"Text_Voce_Perdeu",
+					"Text_Ajuda",
+					"Text_Aviso",
+					"Text_Q1",
+					"Text_Sair",
+					"Texto",
+					"Texto2",
+					"Texto_Tempo_Corrida",
+					"Txt_Ajuda",
+					"Txt_Contagem",
+					"Txt_Créditos",
+					"Txt_Iniciar",
+					"Txt_Nome_Item",
+					"Txt_parabens",
+					"Txt_Sair",
+					"Txt_Status_CPR",
+					"Txt_Tiro_P",
+					"Valor_Tempo_Corrida",
+					"Dialogo_1_3_Cachu",
+					"Dialogo_1_Potao",
+					"FaçaUmaFogueiraAAguaEstaGelada"
+				],
+				"subfolders": [],
+				"name": "Texto"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Layout 1"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Mapa_Inicial",
+					"Mapa_Meio",
+					"Mapa_Fim",
+					"Tela_Inicial",
+					"Tela_Venceu"
+				],
+				"subfolders": [],
+				"name": "Mapas"
+			},
+			{
+				"items": [
+					"Floresta_Potao_1",
+					"Floresta_Potao_2",
+					"Floresta_Potao_3",
+					"Cachoeira_Potao_4"
+				],
+				"subfolders": [],
+				"name": "Cachu_Potao"
+			},
+			{
+				"items": [
+					"Floresta_3_Cachu_1",
+					"Floresta_3_Cachu_2",
+					"Floresta_3_Cachu_3",
+					"Floresta_3_Cachu_4",
+					"Cachoeira_3_Cachu_5",
+					"Cachoeira_3_Cachu_6",
+					"Cachoeira_3_Cachu_7"
+				],
+				"subfolders": [],
+				"name": "Cachu_3_Cachu"
+			},
+			{
+				"items": [
+					"Floresta_Urubu_Rei",
+					"Floresta_Urubu_Rei2",
+					"Floresta_Urubu_Rei3",
+					"Floresta_Urubu_Rei4",
+					"Floresta_Urubu_Rei5",
+					"Cachoeira_Urubu_Rei6"
+				],
+				"subfolders": [],
+				"name": "Urubu Rei"
+			},
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "Mosaicos"
+			}
+		]
+	},
+	"eventSheets": {
+		"items": [
+			"Folha da Floresta",
+			"Folha_Floresta_Potao",
+			"Folha_Floresta_3_Cachu",
+			"Folha_Floresta_Urubu_Rei",
+			"Folha Tela Inicial"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "sans_voice.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 967641441944743,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Background-Tela.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 347727562331629,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Background-Cachu.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 365139261670895,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Background-Geral.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 937687776591906,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Perdeu_Effeito.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 852966011132932,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Venceu-Effeito.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 580879587867903,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica-Venceu.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 986855252194605,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "8 bit Bomb Explosion Sound Effect.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 263185735505713,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Swipe Swoosh Transition Sound Effect.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 610617921382365,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Mouse Click Sound Effect.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 877258819723562,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "8-Bit Rick Roll.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 518821955435600,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "8 Bit Death Sound Effect.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 646552162542426,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 447339363046744,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 135321969116450,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 861769475536674,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 997625692709722,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 744855682954392,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 190068672407808,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 713685886298549,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "Jogo com mecanicas retro e ideais de mostar um pouco sobre as cachoeiras da cidade de Pedro II no Piauí, Brasil.",
+		"version": "1.0.0.0-Alpha",
+		"author": "Jose Jackson Junior",
+		"authorEmail": "juniojackson369@gmail.com",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": true,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-integer-scale",
+		"fullscreenQuality": "low",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"sampling": "nearest",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "progress",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 1280,
+	"viewportHeight": 720,
+	"firstLayout": "Tela_Inicial"
+}
