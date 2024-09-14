@@ -1,0 +1,4536 @@
+{
+	"name": "Folha_Floresta_Potao",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Tempo_Inicio",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 504594070627524
+		},
+		{
+			"eventType": "variable",
+			"name": "Pausado",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 330678568362309
+		},
+		{
+			"eventType": "variable",
+			"name": "Paus_Para_A_Fogueira",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 198864127244302
+		},
+		{
+			"eventType": "variable",
+			"name": "Fases_Potao",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 654575632907914
+		},
+		{
+			"eventType": "variable",
+			"name": "Quest_1",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 407931615538562
+		},
+		{
+			"eventType": "variable",
+			"name": "Sequencia_Dialogo_Potao",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 272570046319854
+		},
+		{
+			"eventType": "variable",
+			"name": "Posicao_Dialogo_Cachu_Potao",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 979348460800164
+		},
+		{
+			"eventType": "variable",
+			"name": "Placa_Potao",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 229560663884324
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Potão",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "HUD_Floresta2",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Spr_Game_Over_Terra",
+									"sid": 980702071928509,
+									"parameters": {
+										"x": "scrollx",
+										"y": "scrolly"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Spr_Venceu_Terra",
+									"sid": 716103100204203,
+									"parameters": {
+										"x": "scrollx",
+										"y": "scrolly"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Spr_Venceu_Pedra",
+									"sid": 129472544280781,
+									"parameters": {
+										"x": "scrollx",
+										"y": "scrolly"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Spr_Game_Over_Pedra",
+									"sid": 673955959920542,
+									"parameters": {
+										"x": "scrollx",
+										"y": "scrolly"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Valor_Estamina",
+									"sid": 802188152791570,
+									"parameters": {
+										"text": "Geral_Estamina"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Valor_Popularidade",
+									"sid": 683252190684887,
+									"parameters": {
+										"text": "Geral_Pop"
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Áudio",
+									"sid": 296677101866543,
+									"parameters": {
+										"tag": "\"Background-Tela\""
+									}
+								}
+							],
+							"sid": 589759978069439
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 578013941087243
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 501749214615596,
+									"parameters": {
+										"variable": "Placa_Potao",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 783667171556122,
+									"parameters": {
+										"layer": "7",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 404915970274352,
+									"parameters": {
+										"layer": "6",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 318778158062964,
+									"parameters": {
+										"layer": "5",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 973950037981491,
+									"parameters": {
+										"layer": "4",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 435964822638779,
+									"parameters": {
+										"layer": "2",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 618973510317708,
+									"parameters": {
+										"layer": "3",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 449247973226905
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 837436023135694,
+									"parameters": {
+										"layer": "3"
+									}
+								},
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 235169512639700
+								},
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Áudio",
+									"sid": 465223072616188,
+									"parameters": {
+										"tag": "\"morte\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 555355004688476,
+									"parameters": {
+										"layer": "7",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 583779892936881,
+									"parameters": {
+										"layer": "6",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 100886863359245,
+									"parameters": {
+										"layer": "5",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 650701761375235,
+									"parameters": {
+										"layer": "4",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 712165906445820,
+									"parameters": {
+										"layer": "2",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Dialogo_Areia",
+									"sid": 641877379245660
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Dialogo_Barro",
+									"sid": 600393482609402
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Dialogo_Pedra",
+									"sid": 436861590832934
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 243879623465498
+								},
+								{
+									"id": "play",
+									"objectClass": "Áudio",
+									"sid": 148610477338824,
+									"parameters": {
+										"audio-file": "8 Bit Death Sound Effect",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"morte\""
+									}
+								}
+							],
+							"sid": 707224044102894
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 224516135079233,
+									"parameters": {
+										"layer": "3"
+									}
+								},
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Áudio",
+									"sid": 781392651820967,
+									"parameters": {
+										"tag": "\"morte\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 996933054558901,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 324849630153730
+										}
+									],
+									"actions": [],
+									"sid": 947522842463671
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 130848719295627,
+									"parameters": {
+										"layer": "3"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 898428683645559
+								},
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Áudio",
+									"sid": 272464490667377,
+									"parameters": {
+										"tag": "\"morte\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop",
+									"objectClass": "Áudio",
+									"sid": 446733808086988,
+									"parameters": {
+										"tag": "\"morte\""
+									}
+								}
+							],
+							"sid": 406237051580075
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 756136726668930
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 289031852807332,
+									"parameters": {
+										"layer": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Dialogo_Areia",
+									"sid": 588564599885975
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Dialogo_Barro",
+									"sid": 573025734916398
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Dialogo_Pedra",
+									"sid": 293572656034164
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 364690182197088
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 404790807649693,
+									"parameters": {
+										"layer": "7",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 300189548696658,
+									"parameters": {
+										"layer": "6",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 964078358483871,
+									"parameters": {
+										"layer": "5",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 533657891770985,
+									"parameters": {
+										"layer": "4",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 745592988502674,
+									"parameters": {
+										"layer": "3",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 545210495230119
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 119824227382916,
+									"parameters": {
+										"key": 82
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 733420765696843,
+									"parameters": {
+										"layer": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-all",
+									"objectClass": "Áudio",
+									"sid": 378386510583497
+								}
+							],
+							"sid": 976077829330715
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 317726045010099,
+									"parameters": {
+										"key": 82
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 922388403214982,
+									"parameters": {
+										"layer": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-all",
+									"objectClass": "Áudio",
+									"sid": 547758883373580
+								}
+							],
+							"sid": 689496902040718
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 533632920531968,
+									"parameters": {
+										"value": "Fases_Potao",
+										"lower-bound": "1",
+										"upper-bound": "3"
+									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 293839861427111,
+									"isInverted": true
+								},
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Áudio",
+									"sid": 207799455865486,
+									"parameters": {
+										"tag": "\"Back-Geral\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Áudio",
+									"sid": 943269248321220,
+									"parameters": {
+										"audio-file": "Background-Geral",
+										"loop": "looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"Back-Geral\""
+									}
+								},
+								{
+									"id": "set-volume",
+									"objectClass": "Áudio",
+									"sid": 648308699476241,
+									"parameters": {
+										"tag": "\"Back-Geral\"",
+										"db": "0"
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Áudio",
+									"sid": 191204510823523,
+									"parameters": {
+										"tag": "\"Back-Cachu\""
+									}
+								}
+							],
+							"sid": 307604680209238
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 326898197801889,
+									"parameters": {
+										"first-value": "Fases_Potao",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 204290585201200,
+									"isInverted": true
+								},
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Áudio",
+									"sid": 914671481884362,
+									"parameters": {
+										"tag": "\"Back-Cachu\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "stop",
+									"objectClass": "Áudio",
+									"sid": 417629135342577,
+									"parameters": {
+										"tag": "\"Back-Geral\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Áudio",
+									"sid": 224383060961449,
+									"parameters": {
+										"audio-file": "Background-Cachu",
+										"loop": "looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"Back-Cachu\""
+									}
+								},
+								{
+									"id": "set-volume",
+									"objectClass": "Áudio",
+									"sid": 232883294234924,
+									"parameters": {
+										"tag": "\"Back-Cachu\"",
+										"db": "0"
+									}
+								}
+							],
+							"sid": 352162494400136
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 311577215175512,
+									"parameters": {
+										"object": "Spr_Portal_Potao_1_para_2"
+									}
+								},
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 799401173474968,
+									"parameters": {
+										"object": "Spr_Portal_Potao_2_3"
+									}
+								},
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 208385542034006,
+									"parameters": {
+										"object": "Spr_Portal_Potao_3_para_Cachu"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Áudio",
+									"sid": 380762903128528,
+									"parameters": {
+										"audio-file": "Venceu-Effeito",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"Venceu-Eff\""
+									}
+								},
+								{
+									"id": "set-volume",
+									"objectClass": "Áudio",
+									"sid": 665108213361992,
+									"parameters": {
+										"tag": "\"Back-Geral\"",
+										"db": "-10"
+									}
+								},
+								{
+									"id": "set-volume",
+									"objectClass": "Áudio",
+									"sid": 487549413153802,
+									"parameters": {
+										"tag": "\"Back-Geral\"",
+										"db": "-10"
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Áudio",
+									"sid": 101325874861182,
+									"parameters": {
+										"tag": "\"fala\""
+									}
+								}
+							],
+							"sid": 243302294760990,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 451191103159375,
+									"parameters": {
+										"first-value": "Fases_Potao",
+										"comparison": 5,
+										"second-value": "4"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Dialogo_1_3_Cachu",
+									"sid": 485445311276106
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 781567608246712
+								}
+							],
+							"actions": [],
+							"sid": 762664620836712,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 212086283126926,
+											"parameters": {
+												"interval-seconds": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-volume",
+											"objectClass": "Áudio",
+											"sid": 880069814100655,
+											"parameters": {
+												"tag": "\"Back-Geral\"",
+												"db": "-5"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Áudio",
+											"sid": 599408534047061,
+											"parameters": {
+												"tag": "\"Back-Cachu\"",
+												"db": "-5"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Áudio",
+											"sid": 431723180940723,
+											"parameters": {
+												"audio-file": "sans_voice",
+												"loop": "not-looping",
+												"volume": "-10",
+												"stereo-pan": "0",
+												"tag-optional": "\"fala\""
+											}
+										}
+									],
+									"sid": 491880527419492
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-visible",
+									"objectClass": "Dialogo_1_3_Cachu",
+									"sid": 729472773590180,
+									"isInverted": true
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 803767125580130,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "stop",
+									"objectClass": "Áudio",
+									"sid": 174922856247461,
+									"parameters": {
+										"tag": "\"fala\""
+									}
+								}
+							],
+							"sid": 755597970992047,
+							"isOrBlock": true
+						}
+					],
+					"sid": 776010982193339
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Cenario_Floresta2",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-destroyed",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 622112273368214
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 756351765712357,
+									"parameters": {
+										"layer": "7",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 505707852471129,
+									"parameters": {
+										"layer": "6",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 665499675422246,
+									"parameters": {
+										"layer": "4",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 617692931451703,
+									"parameters": {
+										"layer": "3",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Áudio",
+									"sid": 699662298505545,
+									"parameters": {
+										"audio-file": "8 Bit Death Sound Effect",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"morte\""
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Áudio",
+									"sid": 367811295611715,
+									"parameters": {
+										"tag": "\"Back-Cachu\""
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Áudio",
+									"sid": 455730783281189,
+									"parameters": {
+										"tag": "\"Back-Geral\""
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Áudio",
+									"sid": 418408709801856,
+									"parameters": {
+										"tag": "\"fala\""
+									}
+								}
+							],
+							"sid": 971732338325430
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 571799912762930,
+									"parameters": {
+										"key": 82
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 657371776966832,
+									"parameters": {
+										"layer": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 154258543221736,
+									"parameters": {
+										"variable": "Placa_Potao",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 463855680112933,
+									"parameters": {
+										"variable": "Fases_Potao",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 883440429405484,
+									"parameters": {
+										"variable": "Fases_Potao",
+										"value": "1"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 226984393084462,
+									"parameters": {
+										"layout": "Tela_Inicial"
+									}
+								},
+								{
+									"id": "reset-global-variables",
+									"objectClass": "System",
+									"sid": 295589361871735,
+									"parameters": {
+										"reset-static": false
+									}
+								}
+							],
+							"sid": 714902308015926
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 644462313627252,
+									"parameters": {
+										"value": "Geral_Estamina",
+										"lower-bound": "-100",
+										"upper-bound": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 896199617578213,
+									"parameters": {
+										"variable": "Placa_Potao",
+										"value": "false"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 838290527379750
+								}
+							],
+							"sid": 378177805838337
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 716237529220486,
+									"parameters": {
+										"value": "Geral_Pop",
+										"lower-bound": "-100",
+										"upper-bound": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 242542404674488,
+									"parameters": {
+										"variable": "Placa_Potao",
+										"value": "false"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 251521958943194
+								}
+							],
+							"sid": 106637943142645
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 789617257576673,
+									"parameters": {
+										"object": "Spr_Portal_Potao_1_para_2"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 690543015677239,
+									"parameters": {
+										"first-value": "Fases_Potao",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Spr_Dialogo_Barro",
+									"sid": 467578949212560,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 905157394272546,
+									"parameters": {
+										"variable": "Placa_Potao",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 301118009225552,
+									"parameters": {
+										"variable": "Fases_Potao",
+										"value": "2"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 523808944275630,
+									"parameters": {
+										"layer": "2",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 575656691996982,
+									"parameters": {
+										"layer": "7",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 286974111476744
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 450571500924960
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 242132882913415,
+									"parameters": {
+										"first-value": "Fases_Potao",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 846945303201931,
+									"parameters": {
+										"layer": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 957815875472350,
+									"parameters": {
+										"variable": "Sequencia_Dialogo_Potao",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 233125775134882,
+									"parameters": {
+										"layer": "7",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 856827103688110,
+									"parameters": {
+										"variable": "Placa_Potao",
+										"value": "false"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 633088437302065,
+									"parameters": {
+										"layout": "Floresta_Potao_2"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 450011362042395,
+									"parameters": {
+										"variable": "Sequencia_Dialogo_Potao",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 877605191439580,
+									"parameters": {
+										"variable": "Tempo_Inicio",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 585280474319023
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 550662238051780,
+									"parameters": {
+										"object": "Spr_Portal_Potao_2_3"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 425508575758507,
+									"parameters": {
+										"first-value": "Fases_Potao",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Spr_Dialogo_Barro",
+									"sid": 398755641569391,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 681897350560152,
+									"parameters": {
+										"variable": "Placa_Potao",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 929135997111237,
+									"parameters": {
+										"variable": "Fases_Potao",
+										"value": "3"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 556332587259558,
+									"parameters": {
+										"layer": "2",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 142004312925719,
+									"parameters": {
+										"layer": "7",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 382721620115742
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 881104283971004
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 777933287827772,
+									"parameters": {
+										"layer": "2"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 307856361453496,
+									"parameters": {
+										"first-value": "Fases_Potao",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 330094643033356,
+									"parameters": {
+										"variable": "Sequencia_Dialogo_Potao",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 113994399894999,
+									"parameters": {
+										"layer": "7",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 120189178124549,
+									"parameters": {
+										"variable": "Placa_Potao",
+										"value": "false"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 555065316961965,
+									"parameters": {
+										"layout": "Floresta_Potao_3"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 845534299069537,
+									"parameters": {
+										"variable": "Sequencia_Dialogo_Potao",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 569601736691748,
+									"parameters": {
+										"variable": "Tempo_Inicio",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 416533854926045
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 264487420034120,
+									"parameters": {
+										"object": "Spr_Portal_Potao_3_para_Cachu"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 951587029653881,
+									"parameters": {
+										"first-value": "Fases_Potao",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Spr_Dialogo_Barro",
+									"sid": 310131777649778,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 954050723367637,
+									"parameters": {
+										"variable": "Fases_Potao",
+										"value": "4"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 914876882470885,
+									"parameters": {
+										"variable": "Placa_Potao",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 873024719018565,
+									"parameters": {
+										"layer": "2",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 811907891067188,
+									"parameters": {
+										"layer": "7",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 470858004130775
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 404123953499775
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 438137501226046,
+									"parameters": {
+										"first-value": "Fases_Potao",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 929830799561642,
+									"parameters": {
+										"layer": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 875904144691112,
+									"parameters": {
+										"variable": "Sequencia_Dialogo_Potao",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 711256614528613,
+									"parameters": {
+										"layer": "7",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 389778126322770,
+									"parameters": {
+										"variable": "Placa_Potao",
+										"value": "false"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 106235806691315,
+									"parameters": {
+										"layout": "Cachoeira_Potao_4"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 520546918748389,
+									"parameters": {
+										"variable": "Sequencia_Dialogo_Potao",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 411185928192534,
+									"parameters": {
+										"variable": "Tempo_Inicio",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 158704756514779
+						}
+					],
+					"sid": 329108029937267
+				}
+			],
+			"sid": 355622841758325
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Controle/Pausa",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Pausa/Continue",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 101111659310659,
+									"parameters": {
+										"key": 80
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 720944636557756,
+									"parameters": {
+										"layer": "6"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 794805440500530,
+									"parameters": {
+										"layer": "3"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 116570000137242,
+									"parameters": {
+										"layer": "2"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 651402136369040,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 266517924589082,
+											"parameters": {
+												"variable": "Pausado"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-time-scale",
+											"objectClass": "System",
+											"sid": 114012363743480,
+											"parameters": {
+												"time-scale": "1.0"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 130694870640910,
+											"parameters": {
+												"variable": "Pausado",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 292323128084145,
+											"parameters": {
+												"layer": "5",
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 282512582475330
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 551516362325172
+										}
+									],
+									"actions": [
+										{
+											"id": "set-time-scale",
+											"objectClass": "System",
+											"sid": 553507949952748,
+											"parameters": {
+												"time-scale": "0"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 221712995217521,
+											"parameters": {
+												"variable": "Pausado",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 229831797606617,
+											"parameters": {
+												"layer": "5",
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 829066381047490
+								}
+							]
+						}
+					],
+					"sid": 173854475509906
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Controle",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 915743783729019,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 778868619666237,
+									"behaviorType": "8Direções",
+									"parameters": {
+										"control": "up"
+									}
+								}
+							],
+							"sid": 771617968901445
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 532064267826834,
+									"parameters": {
+										"key": 68
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 946614951370368,
+									"parameters": {
+										"key": 39
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 986241944815018,
+									"behaviorType": "8Direções",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 949486077348148,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 305299253370950,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 749003825829082,
+									"parameters": {
+										"key": 65
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 684557451861760,
+									"parameters": {
+										"key": 37
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 848942243398003,
+									"behaviorType": "8Direções",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 543623895731356,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 886824899823533,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 214859812866863,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 899439489305166,
+									"behaviorType": "8Direções",
+									"parameters": {
+										"control": "down"
+									}
+								}
+							],
+							"sid": 919902737204002
+						}
+					],
+					"sid": 949674749438198
+				}
+			],
+			"sid": 386929979670590
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Limpeza_Cachoeira3",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Espinhos",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 261583907760707,
+									"parameters": {
+										"object": "Spr_Urtiga_Grande"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 568020092200166,
+									"parameters": {
+										"variable": "Geral_Estamina",
+										"value": "13"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 250429455156000,
+									"parameters": {
+										"variable": "Geral_Pop",
+										"value": "13"
+									}
+								}
+							],
+							"sid": 125028414440159
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 239669935937002,
+									"parameters": {
+										"object": "Spr_Urtiga_Media"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 552862687049031,
+									"parameters": {
+										"variable": "Geral_Estamina",
+										"value": "8"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 495255284527708,
+									"parameters": {
+										"variable": "Geral_Pop",
+										"value": "8"
+									}
+								}
+							],
+							"sid": 184885117746604
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 661719005673165,
+									"parameters": {
+										"object": "Spr_Urtiga_Seca"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 885001971510221,
+									"parameters": {
+										"variable": "Geral_Estamina",
+										"value": "5"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 934926726781265,
+									"parameters": {
+										"variable": "Geral_Pop",
+										"value": "5"
+									}
+								}
+							],
+							"sid": 286466077256198
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 736903609269865,
+									"parameters": {
+										"object": "Spr_Cactus_Grande"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 951548257203676,
+									"parameters": {
+										"variable": "Geral_Estamina",
+										"value": "15"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 146061847162242,
+									"parameters": {
+										"variable": "Geral_Pop",
+										"value": "15"
+									}
+								}
+							],
+							"sid": 677426337033193
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 940631536525763,
+									"parameters": {
+										"object": "Spr_Cactus_Medio"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 791965286312133,
+									"parameters": {
+										"variable": "Geral_Estamina",
+										"value": "10"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 849860712929136,
+									"parameters": {
+										"variable": "Geral_Pop",
+										"value": "10"
+									}
+								}
+							],
+							"sid": 750541598013064
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 385557323838892,
+									"parameters": {
+										"object": "Spr_Espinhos_Pequena"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 986741686772314,
+									"parameters": {
+										"variable": "Geral_Estamina",
+										"value": "5"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 527505906239612,
+									"parameters": {
+										"variable": "Geral_Pop",
+										"value": "5"
+									}
+								}
+							],
+							"sid": 383193900545305
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 223520064100856,
+									"parameters": {
+										"object": "garrafa_dagua"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "garrafa_dagua",
+									"sid": 679491364983595
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 711149904314847,
+									"parameters": {
+										"variable": "Geral_Estamina",
+										"value": "15"
+									}
+								}
+							],
+							"sid": 348806853919683
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 296765354946536,
+									"parameters": {
+										"object": "cobra"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 683574187797915,
+									"parameters": {
+										"variable": "Geral_Estamina",
+										"value": "10"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 355499203740981,
+									"parameters": {
+										"variable": "Geral_Pop",
+										"value": "20"
+									}
+								}
+							],
+							"sid": 604787414056370
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 479833891719943,
+									"parameters": {
+										"object": "Spr_Folha"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 877499002872996,
+									"parameters": {
+										"variable": "Geral_Pop",
+										"value": "-15"
+									}
+								}
+							],
+							"sid": 676087712533855
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 201229915011113,
+									"parameters": {
+										"object": "Spr_Lixo"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 113776728018391,
+									"parameters": {
+										"variable": "Geral_Pop",
+										"value": "25"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Lixo",
+									"sid": 828070955563491
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 495944919563245,
+									"parameters": {
+										"object-to-create": "Spr_Lixo",
+										"layer": "0",
+										"x": "random(1120, 1220)",
+										"y": "random(600, 680)",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 445953634788806
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-at-offset",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 640629912178404,
+									"parameters": {
+										"object": "Spr_Arvore_Caida",
+										"offset-x": "0",
+										"offset-y": "-2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Spr_Arvore_Caida",
+									"sid": 651796376693428,
+									"behaviorType": "MovimentoEmGrid",
+									"parameters": {
+										"control": "up"
+									}
+								}
+							],
+							"sid": 547047429712225
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-at-offset",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 676194536565408,
+									"parameters": {
+										"object": "Spr_Arvore_Caida",
+										"offset-x": "0",
+										"offset-y": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Spr_Arvore_Caida",
+									"sid": 166344977309975,
+									"behaviorType": "MovimentoEmGrid",
+									"parameters": {
+										"control": "down"
+									}
+								}
+							],
+							"sid": 744134701368752
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-at-offset",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 970002988936107,
+									"parameters": {
+										"object": "Spr_Arvore_Caida",
+										"offset-x": "2",
+										"offset-y": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Spr_Arvore_Caida",
+									"sid": 453743208909023,
+									"behaviorType": "MovimentoEmGrid",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 259914136613432
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-at-offset",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 270115963588390,
+									"parameters": {
+										"object": "Spr_Arvore_Caida",
+										"offset-x": "-2",
+										"offset-y": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Spr_Arvore_Caida",
+									"sid": 325118089779022,
+									"behaviorType": "MovimentoEmGrid",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 418376467830246
+						}
+					],
+					"sid": 334265506594474
+				}
+			],
+			"sid": 613305774914964
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Placa",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 371505570007412,
+							"parameters": {
+								"key": 77
+							}
+						},
+						{
+							"id": "is-between-values",
+							"objectClass": "System",
+							"sid": 823927723917590,
+							"parameters": {
+								"value": "Fases_Potao",
+								"lower-bound": "1",
+								"upper-bound": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 263863289581524,
+							"parameters": {
+								"variable": "Placa_Potao"
+							}
+						}
+					],
+					"sid": 659161860890162,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 617256332518662,
+									"parameters": {
+										"variable": "Placa_Potao"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 242329146371670,
+									"parameters": {
+										"layer": "7"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 182662538527617,
+									"parameters": {
+										"layer": "5"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 335885089526836,
+									"parameters": {
+										"layer": "3"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 512020749754494,
+									"parameters": {
+										"layer": "2"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Text_Aviso",
+									"sid": 601434709961201,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 670371975899270,
+									"parameters": {
+										"layer": "6",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 584396564281814
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 999801130481696,
+									"parameters": {
+										"variable": "Placa_Potao"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 938379151178862,
+									"parameters": {
+										"layer": "7"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 839123855321347,
+									"parameters": {
+										"layer": "5"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 884368680518537,
+									"parameters": {
+										"layer": "3"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 539501695441650,
+									"parameters": {
+										"layer": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Text_Aviso",
+									"sid": 371450569647237,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 121872870690270,
+									"parameters": {
+										"layer": "6",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 133951962646452,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 336283407083321
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 109860079271266,
+							"parameters": {
+								"variable": "Placa_Potao",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 260571312516224
+				}
+			],
+			"sid": 291220764531060
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Roll_P",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Rolagem",
+							"sid": 546652295295849,
+							"parameters": {
+								"object": "Roll_Vertical"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "Rolagem",
+							"sid": 322139595340942,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "640"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "Rolagem",
+							"sid": 281023296685362,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "1940"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Rolagem",
+							"sid": 815501116024098,
+							"parameters": {
+								"x": "Spr_Personagem_Caminho.X"
+							}
+						}
+					],
+					"sid": 367588176928970
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Rolagem",
+							"sid": 471244419827471,
+							"parameters": {
+								"object": "Roll_Vertical"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Rolagem",
+							"sid": 871307054999345,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "230"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Rolagem",
+							"sid": 644514975710968,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "1125"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Rolagem",
+							"sid": 340865322289741,
+							"parameters": {
+								"y": "Spr_Personagem_Caminho.Y"
+							}
+						}
+					],
+					"sid": 671767677124897
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 771112529853794,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "640"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Rolagem",
+							"sid": 609937776327023,
+							"parameters": {
+								"x": "650"
+							}
+						}
+					],
+					"sid": 400701279834838
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 540198405365934,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "1935"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Rolagem",
+							"sid": 589198091926577,
+							"parameters": {
+								"x": "1925"
+							}
+						}
+					],
+					"sid": 148736618625358
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 971802080456583,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "1125"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Rolagem",
+							"sid": 286385380356317,
+							"parameters": {
+								"y": "1100"
+							}
+						}
+					],
+					"sid": 431569660420944
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 852397648253953,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "230"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Rolagem",
+							"sid": 924241647300750,
+							"parameters": {
+								"y": "240"
+							}
+						}
+					],
+					"sid": 266032591703853
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "BLOQUEADOR",
+							"sid": 357121180244291,
+							"parameters": {
+								"object": "Rolagem"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 506053567008460
+				}
+			],
+			"sid": 457228901187153
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Dialogo_Potão",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 996942487827431,
+							"parameters": {
+								"layer": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 527712346929433,
+							"parameters": {
+								"layer": "7",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 932669211394058
+				}
+			],
+			"sid": 100130591937705
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Jogo_Frio",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Spr_Madeira_1",
+							"sid": 477050744317663,
+							"parameters": {
+								"object": "Spr_X_Fogueira"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Spr_Madeira_2",
+							"sid": 469861904808181,
+							"parameters": {
+								"object": "Spr_X_Fogueira"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Spr_Madeira_3",
+							"sid": 728946036223566,
+							"parameters": {
+								"object": "Spr_X_Fogueira"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Spr_Madeira_4",
+							"sid": 302379255905430,
+							"parameters": {
+								"object": "Spr_X_Fogueira"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Spr_Madeira_5",
+							"sid": 344710081433031,
+							"parameters": {
+								"object": "Spr_X_Fogueira"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Spr_Madeira_1",
+							"sid": 634711305285605,
+							"behaviorType": "ArrastarSoltar",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Spr_Madeira_2",
+							"sid": 464402322625425,
+							"behaviorType": "ArrastarSoltar",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Spr_Madeira_3",
+							"sid": 889319670714886,
+							"behaviorType": "ArrastarSoltar",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Spr_Madeira_4",
+							"sid": 364045605087793,
+							"behaviorType": "ArrastarSoltar",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Spr_Madeira_5",
+							"sid": 827730238442565,
+							"behaviorType": "ArrastarSoltar",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 170026205822580,
+							"parameters": {
+								"variable": "Sequencia_Dialogo_Potao",
+								"value": "3"
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "Spr_Isqueiro",
+							"sid": 765039310511071,
+							"behaviorType": "MoverPara",
+							"parameters": {
+								"object": "Spr_X_Fogueira",
+								"image-point": "0",
+								"mode": "direct"
+							}
+						}
+					],
+					"sid": 741759239535639,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 755523623966158,
+									"parameters": {
+										"first-value": "Sequencia_Dialogo_Potao",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 616953851818791,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 529261589131835,
+									"parameters": {
+										"x": "Spr_Dialogo_Pedra.X - 530",
+										"y": "Spr_Dialogo_Pedra.Y - 30"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 418373172155829,
+									"parameters": {
+										"text": "\"Genkidama\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Spr_Dialogo_Pedra",
+									"sid": 138008234201455,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 312460813466904
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Spr_Isqueiro",
+									"sid": 552184493438225,
+									"parameters": {
+										"object": "Spr_X_Fogueira"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Spr_X_Fogueira",
+									"sid": 272989541553542,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Madeira_1",
+									"sid": 494348612715291
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Madeira_2",
+									"sid": 174101702901715
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Madeira_3",
+									"sid": 100082385002303
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Madeira_4",
+									"sid": 678911684792657
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Madeira_5",
+									"sid": 112204639697148
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Isqueiro",
+									"sid": 841798791408330
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Spr_Fumaca",
+									"sid": 914667113318546,
+									"parameters": {
+										"x": "1221.684506",
+										"y": "1182.32216"
+									}
+								},
+								{
+									"id": "start-animation",
+									"objectClass": "Spr_Fumaca",
+									"sid": 628382233368826,
+									"parameters": {
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 698362909185615
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-animation-finished",
+							"objectClass": "Spr_Fumaca",
+							"sid": 865896384473041
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Spr_Fumaca",
+							"sid": 364220398649622,
+							"parameters": {
+								"object": "Spr_X_Fogueira"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 902312805789149,
+							"parameters": {
+								"object-to-create": "Spr_Fogueira",
+								"layer": "0",
+								"x": "1216",
+								"y": "1186 + 40",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Spr_Fumaca",
+							"sid": 939947252565460
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 499592819162805,
+							"parameters": {
+								"audio-file": "8 bit Bomb Explosion Sound Effect",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 736938880078673
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-visible",
+							"objectClass": "Spr_Fogueira",
+							"sid": 785039212666865
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Áudio",
+							"sid": 658398090019357,
+							"parameters": {
+								"tag": "\"fala\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 240771254862987,
+							"parameters": {
+								"variable": "Sequencia_Dialogo_Potao",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Spr_Portal_Cachu_Potao_Floresta_3_Cachu",
+							"sid": 366319965041513,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 240018966252191
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 854912134943399,
+							"parameters": {
+								"first-value": "Sequencia_Dialogo_Potao",
+								"comparison": 0,
+								"second-value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 527514281800301,
+							"parameters": {
+								"layer": "7",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Dialogo_1_Potao",
+							"sid": 881432746810990,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Spr_Dialogo_Pedra",
+							"sid": 854764768070876,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Dialogo_1_Potao",
+							"sid": 430538937979989,
+							"parameters": {
+								"x": "Spr_Dialogo_Pedra.X - 530",
+								"y": "Spr_Dialogo_Pedra.Y - 30"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Dialogo_1_Potao",
+							"sid": 697995624073704,
+							"parameters": {
+								"text": "\"Foguinho, que diliça\""
+							}
+						}
+					],
+					"sid": 221158038413432,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 629256566860750,
+									"parameters": {
+										"first-value": "Tempo_Inicio",
+										"comparison": 4,
+										"second-value": "25"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 319458592132539,
+									"parameters": {
+										"layer": "7",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 835748018471152
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 776041750552540,
+							"parameters": {
+								"object": "Spr_Portal_Cachu_Potao_Floresta_3_Cachu"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Spr_Portal_Cachu_Potao_Floresta_3_Cachu",
+							"sid": 167307711934198
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 573733311315518,
+							"parameters": {
+								"first-value": "Fases_Potao",
+								"comparison": 0,
+								"second-value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 599755269823034,
+							"parameters": {
+								"layout": "Mapa_Meio"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 191253096431131,
+							"parameters": {
+								"variable": "Sequencia_Dialogo_Potao",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 404731489160059
+				}
+			],
+			"sid": 224137296014511
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Dialogo_Cachu_Potão",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 816026742392895,
+							"parameters": {
+								"first-value": "Fases_Potao",
+								"comparison": 0,
+								"second-value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Spr_Dialogo_Pedra",
+							"sid": 541208645329733,
+							"parameters": {
+								"x": "ViewportMidX(0) ",
+								"y": "ViewportMidY(0)+ 250"
+							}
+						}
+					],
+					"sid": 412898185294890,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Spr_Dialogo_Pedra",
+									"sid": 469202962498833,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "ViewportMidY(0)"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 113759119284909,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "ViewportMidY(0) + 100"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Spr_Dialogo_Pedra",
+									"sid": 746166581065821,
+									"parameters": {
+										"x": "ViewportMidX(0) ",
+										"y": "ViewportMidY(0) - 250"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 795944300127868,
+									"parameters": {
+										"variable": "Posicao_Dialogo_Cachu_Potao",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 734715733735771
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 177060324461782,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "ViewportMidY(0) - 100"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "Spr_Dialogo_Pedra",
+									"sid": 654635788929680,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "ViewportMidY(0)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Spr_Dialogo_Pedra",
+									"sid": 426742070626900,
+									"parameters": {
+										"x": "ViewportMidX(0) ",
+										"y": "ViewportMidY(0)+ 250"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 652929746675818,
+									"parameters": {
+										"variable": "Posicao_Dialogo_Cachu_Potao",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 711819554765167
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-visible",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 755510341018955
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 529883314239304,
+									"parameters": {
+										"x": "Spr_Dialogo_Pedra.X - 540",
+										"y": "Spr_Dialogo_Pedra.Y - 45"
+									}
+								}
+							],
+							"sid": 775155614018965,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 243257991819364,
+									"parameters": {
+										"value": "Tempo_Inicio",
+										"lower-bound": "0",
+										"upper-bound": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop",
+									"objectClass": "Áudio",
+									"sid": 958986492114542,
+									"parameters": {
+										"tag": "\"fala\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 807033103974783,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Spr_Dialogo_Pedra",
+									"sid": 579056910138476,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 900917564102599,
+									"parameters": {
+										"layer": "7",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 513792968125860,
+									"parameters": {
+										"variable": "Sequencia_Dialogo_Potao",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 435100234603530
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 135090695813367,
+									"parameters": {
+										"value": "Tempo_Inicio",
+										"lower-bound": "2",
+										"upper-bound": "8"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 997384771551292,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Spr_Dialogo_Pedra",
+									"sid": 325294913100396,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 368701619563634,
+									"parameters": {
+										"layer": "7",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 670883818288073,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 944446479552873,
+											"parameters": {
+												"first-value": "Sequencia_Dialogo_Potao",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "Dialogo_1_Potao",
+											"sid": 151632894480359,
+											"parameters": {
+												"text": "\"Faça uma fogueira, a agua esta gelada!\""
+											}
+										}
+									],
+									"sid": 518715808808338
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 149475508601398,
+									"parameters": {
+										"value": "Tempo_Inicio",
+										"lower-bound": "6",
+										"upper-bound": "12"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 735203899638440,
+									"parameters": {
+										"variable": "Sequencia_Dialogo_Potao",
+										"value": "2"
+									}
+								}
+							],
+							"sid": 510105318074775,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 987468954090090,
+											"parameters": {
+												"first-value": "Sequencia_Dialogo_Potao",
+												"comparison": 0,
+												"second-value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "Dialogo_1_Potao",
+											"sid": 578521405682155,
+											"parameters": {
+												"text": "\"Só junta uns paus e ponha fogo! | COLOQUE OS GRAVETOS NO X|\""
+											}
+										}
+									],
+									"sid": 260259124371279
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 853179120353949,
+									"parameters": {
+										"first-value": "Tempo_Inicio",
+										"comparison": 4,
+										"second-value": "12"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 960146763908261,
+									"parameters": {
+										"first-value": "Sequencia_Dialogo_Potao",
+										"comparison": 1,
+										"second-value": "3"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 216936851389158,
+									"parameters": {
+										"first-value": "Sequencia_Dialogo_Potao",
+										"comparison": 1,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop",
+									"objectClass": "Áudio",
+									"sid": 681018158385078,
+									"parameters": {
+										"tag": "\"fala\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 527527235930367,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Spr_Dialogo_Pedra",
+									"sid": 285604995447918,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 459513295120568
+						}
+					]
+				}
+			],
+			"sid": 727533521843266
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Dialogo_Potao",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 197073760553638,
+							"parameters": {
+								"first-value": "Fases_Potao",
+								"comparison": 3,
+								"second-value": "3"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 685798660286301,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-visible",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 950232006048166
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 826553364102823,
+									"parameters": {
+										"x": "Spr_Dialogo_Barro.X - 530",
+										"y": "Spr_Dialogo_Barro.Y - 50"
+									}
+								}
+							],
+							"sid": 787242089292552,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 177246545730646,
+									"parameters": {
+										"value": "Tempo_Inicio",
+										"lower-bound": "0",
+										"upper-bound": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Spr_Dialogo_Barro",
+									"sid": 630114759113541,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Dialogo_1_Potao",
+									"sid": 161018513734066,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 596015386310959,
+									"parameters": {
+										"layer": "7",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 967047741712049
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 767072708214056,
+									"parameters": {
+										"value": "Tempo_Inicio",
+										"lower-bound": "2",
+										"upper-bound": "8"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 798563525019335,
+									"parameters": {
+										"variable": "Sequencia_Dialogo_Potao",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 727156890816040,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 940982108661564,
+											"parameters": {
+												"first-value": "Sequencia_Dialogo_Potao",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Spr_Dialogo_Barro",
+											"sid": 386093198198851,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Dialogo_1_Potao",
+											"sid": 535239977048628,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 923814519070344,
+											"parameters": {
+												"layer": "7",
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 387613712783670,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 349424490845789,
+													"parameters": {
+														"first-value": "Fases_Potao",
+														"comparison": 0,
+														"second-value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Dialogo_1_Potao",
+													"sid": 333285423611053,
+													"parameters": {
+														"text": "\"Olá, me chamo João, e serei o seu guia turistico na Cachoeira do Potão.\""
+													}
+												}
+											],
+											"sid": 778569333224127
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 550529271928717,
+													"parameters": {
+														"first-value": "Fases_Potao",
+														"comparison": 0,
+														"second-value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Dialogo_1_Potao",
+													"sid": 225120810972234,
+													"parameters": {
+														"text": "\"A trilha da Cachoeira dos Potões tem uma transição entre Terra Roxa à Pedra Roxa/Cinza\""
+													}
+												}
+											],
+											"sid": 703952186996401
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 330324410708830,
+													"parameters": {
+														"first-value": "Fases_Potao",
+														"comparison": 0,
+														"second-value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Dialogo_1_Potao",
+													"sid": 145447615591230,
+													"parameters": {
+														"text": "\"Olha! Já estamos no fim, essa trilha é curta.\""
+													}
+												}
+											],
+											"sid": 321859111441763
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 485610692844470,
+									"parameters": {
+										"value": "Tempo_Inicio",
+										"lower-bound": "8",
+										"upper-bound": "12"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 219391467840003,
+									"parameters": {
+										"variable": "Sequencia_Dialogo_Potao",
+										"value": "2"
+									}
+								}
+							],
+							"sid": 977906896894734,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 264981517599518,
+											"parameters": {
+												"first-value": "Sequencia_Dialogo_Potao",
+												"comparison": 0,
+												"second-value": "2"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 690194283605785,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 978578437321375,
+													"parameters": {
+														"first-value": "Fases_Potao",
+														"comparison": 0,
+														"second-value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Dialogo_1_Potao",
+													"sid": 460817709445865,
+													"parameters": {
+														"text": "\"Cuidado! As plantas aqui são conhecidas por machucar.\""
+													}
+												}
+											],
+											"sid": 522937347715987
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 697767554104342,
+													"parameters": {
+														"first-value": "Fases_Potao",
+														"comparison": 0,
+														"second-value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Dialogo_1_Potao",
+													"sid": 582015055586518,
+													"parameters": {
+														"text": "\"Ao se machucar na urtiga, use a água gelada!\""
+													}
+												}
+											],
+											"sid": 926066153521975
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 358133359839006,
+													"parameters": {
+														"first-value": "Fases_Potao",
+														"comparison": 0,
+														"second-value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "stop",
+													"objectClass": "Áudio",
+													"sid": 119536309896524,
+													"parameters": {
+														"tag": "\"fala\""
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 199387722462922,
+													"parameters": {
+														"layer": "7",
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 165302059479362
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 182835352911892,
+									"parameters": {
+										"value": "Tempo_Inicio",
+										"lower-bound": "12",
+										"upper-bound": "15"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 359250645113202,
+									"parameters": {
+										"variable": "Sequencia_Dialogo_Potao",
+										"value": "3"
+									}
+								}
+							],
+							"sid": 323777049364559,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 724375539817191,
+											"parameters": {
+												"first-value": "Sequencia_Dialogo_Potao",
+												"comparison": 0,
+												"second-value": "3"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 303645313926627,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 120563483338866,
+													"parameters": {
+														"first-value": "Fases_Potao",
+														"comparison": 0,
+														"second-value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Dialogo_1_Potao",
+													"sid": 365594041098674,
+													"parameters": {
+														"text": "\"Mais a esquerda, temos uma placa, olhe mais de perto! |APERTE M|\""
+													}
+												}
+											],
+											"sid": 914937255510881
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 879703763572272,
+													"parameters": {
+														"first-value": "Fases_Potao",
+														"comparison": 0,
+														"second-value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Dialogo_1_Potao",
+													"sid": 807453660977368,
+													"parameters": {
+														"text": "\"Olha! Outra placa.\""
+													}
+												}
+											],
+											"sid": 897598310979042
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 517904774796641,
+													"parameters": {
+														"first-value": "Fases_Potao",
+														"comparison": 0,
+														"second-value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "stop",
+													"objectClass": "Áudio",
+													"sid": 750937883170687,
+													"parameters": {
+														"tag": "\"fala\""
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 882760717893672,
+													"parameters": {
+														"layer": "7",
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 996616699481693
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 823338355775357,
+									"parameters": {
+										"first-value": "Tempo_Inicio",
+										"comparison": 4,
+										"second-value": "15"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 803715146891641,
+									"parameters": {
+										"variable": "Sequencia_Dialogo_Potao",
+										"value": "4"
+									}
+								}
+							],
+							"sid": 499670290506956,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 698016922564752,
+											"parameters": {
+												"first-value": "Sequencia_Dialogo_Potao",
+												"comparison": 0,
+												"second-value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "stop",
+											"objectClass": "Áudio",
+											"sid": 575871111862629,
+											"parameters": {
+												"tag": "\"fala\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 953538792710881,
+											"parameters": {
+												"variable": "Sequencia_Dialogo_Potao",
+												"value": "5"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Dialogo_1_Potao",
+											"sid": 228623426320033,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Spr_Dialogo_Barro",
+											"sid": 723914045941649,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 576650976099126,
+											"parameters": {
+												"layer": "7",
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 833723589383114
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 600046814777892,
+							"parameters": {
+								"first-value": "Fases_Potao",
+								"comparison": 4,
+								"second-value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Spr_Placa_Pontuação_Pedra",
+							"sid": 111590606407521,
+							"parameters": {
+								"x": "ViewportMidX(0) + 400",
+								"y": "ViewportMidY(0) - 250"
+							}
+						}
+					],
+					"sid": 924159638463040,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 561138305958787,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "ViewportMidY(0)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Spr_Placa_Pontuação_Pedra",
+									"sid": 523664528411451,
+									"parameters": {
+										"x": "ViewportMidX(0) + 400",
+										"y": "ViewportMidY(0)+ 250"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Text_Popularidade",
+									"sid": 357376947672071,
+									"parameters": {
+										"x": "Spr_Placa_Pontuação_Pedra.X - 135",
+										"y": "Spr_Placa_Pontuação_Pedra.Y - 30"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Text_Estamina",
+									"sid": 760117153185071,
+									"parameters": {
+										"x": "Spr_Placa_Pontuação_Pedra.X - 135",
+										"y": "Spr_Placa_Pontuação_Pedra.Y "
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Valor_Popularidade",
+									"sid": 480451904639746,
+									"parameters": {
+										"x": "Spr_Placa_Pontuação_Pedra.X + 70",
+										"y": "Spr_Placa_Pontuação_Pedra.Y - 30"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Valor_Estamina",
+									"sid": 896757832363562,
+									"parameters": {
+										"x": "Spr_Placa_Pontuação_Pedra.X + 70",
+										"y": "Spr_Placa_Pontuação_Pedra.Y"
+									}
+								}
+							],
+							"sid": 536239598681325
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 670203343776141,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "ViewportMidY(0)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Spr_Placa_Pontuação_Pedra",
+									"sid": 167744406266681,
+									"parameters": {
+										"x": "ViewportMidX(0) + 400",
+										"y": "ViewportMidY(0) - 250"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Text_Popularidade",
+									"sid": 620479715938970,
+									"parameters": {
+										"x": "Spr_Placa_Pontuação_Pedra.X - 135",
+										"y": "Spr_Placa_Pontuação_Pedra.Y - 30"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Text_Estamina",
+									"sid": 407680991216775,
+									"parameters": {
+										"x": "Spr_Placa_Pontuação_Pedra.X - 135",
+										"y": "Spr_Placa_Pontuação_Pedra.Y "
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Valor_Popularidade",
+									"sid": 950501161242313,
+									"parameters": {
+										"x": "Spr_Placa_Pontuação_Pedra.X + 70",
+										"y": "Spr_Placa_Pontuação_Pedra.Y - 30"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Valor_Estamina",
+									"sid": 929041177827448,
+									"parameters": {
+										"x": "Spr_Placa_Pontuação_Pedra.X + 70",
+										"y": "Spr_Placa_Pontuação_Pedra.Y"
+									}
+								}
+							],
+							"sid": 925799552604180
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 787992481208650,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 990406323046930,
+							"parameters": {
+								"variable": "Tempo_Inicio",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 576461787437335
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 520654166850647,
+							"parameters": {
+								"first-value": "Sequencia_Dialogo_Potao",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 855797924908150,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 173328014786529,
+									"parameters": {
+										"first-value": "Fases_Potao",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 562796122815736
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 337777402798123,
+									"parameters": {
+										"variable": "Tempo_Inicio",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 166633453833583
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 335965902563685,
+									"parameters": {
+										"first-value": "Fases_Potao",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 700563242994190
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 661766017998987,
+									"parameters": {
+										"variable": "Tempo_Inicio",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 814092506873258
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 263641412817498,
+									"parameters": {
+										"first-value": "Fases_Potao",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 649863796731746
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 907930314561423,
+									"parameters": {
+										"variable": "Tempo_Inicio",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 392851090058015
+						}
+					]
+				}
+			],
+			"sid": 993285690243295
+		}
+	],
+	"sid": 196264819211651
+}

@@ -1,0 +1,1335 @@
+{
+	"name": "Folha Tela Inicial",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Geral_Estamina",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 196689845482367
+		},
+		{
+			"eventType": "variable",
+			"name": "Geral_Pop",
+			"type": "number",
+			"initialValue": "50",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 643313189351841
+		},
+		{
+			"eventType": "variable",
+			"name": "Creditos_Finais",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 920903213027769
+		},
+		{
+			"eventType": "variable",
+			"name": "Fases_Telas",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 670285344302887
+		},
+		{
+			"eventType": "variable",
+			"name": "Opcao_Inicio",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 718383489046325
+		},
+		{
+			"eventType": "variable",
+			"name": "AdicaoY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 139951957148478
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Controle_Mapa",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 597463155868120,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 145485953161393,
+							"behaviorType": "8Direções",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 944184663504033
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 106424432058878,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 154569569938031,
+							"behaviorType": "8Direções",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 600522034685995
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 107927246769213,
+							"parameters": {
+								"key": 68
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 143407751598640,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 459849633859215,
+							"behaviorType": "8Direções",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 381017153181305,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 169490491880911,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 796205744984920,
+							"parameters": {
+								"key": 65
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 374288059580714,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 725192071070712,
+							"behaviorType": "8Direções",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 184906185494526,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 642082471783146,
+					"isOrBlock": true
+				}
+			],
+			"sid": 345197437779622
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Personagem_Mapa",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 801757225482362,
+							"parameters": {
+								"object": "Spr_Portal_Fase_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 586880828347526,
+							"parameters": {
+								"layout": "Floresta_Potao_1"
+							}
+						}
+					],
+					"sid": 102063883673415
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 268462111535009,
+							"parameters": {
+								"object": "Spr_Portal_Fase_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 229206130632662,
+							"parameters": {
+								"layout": "Floresta_3_Cachu_1"
+							}
+						}
+					],
+					"sid": 112802658286544
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 375989687164439,
+							"parameters": {
+								"object": "Spr_Portal_Fase_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 419911488531233,
+							"parameters": {
+								"layout": "Floresta_Urubu_Rei"
+							}
+						}
+					],
+					"sid": 660485329157673
+				}
+			],
+			"sid": 583399655288139
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Geral",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 251104170567626,
+							"parameters": {
+								"key": 87
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 355832140597799,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 348327896000445,
+							"parameters": {
+								"variable": "Opcao_Inicio",
+								"value": "-1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Mosaico",
+							"sid": 725715303900372,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Txt_Ajuda",
+							"sid": 459761440955138,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 273604610786770,
+							"parameters": {
+								"audio-file": "Swipe Swoosh Transition Sound Effect",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 528387013470987,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 593641082195791,
+							"parameters": {
+								"key": 83
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 672133099051097,
+							"parameters": {
+								"key": 40
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 113497110454104,
+							"parameters": {
+								"variable": "Opcao_Inicio",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Mosaico",
+							"sid": 610064498112204,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Txt_Ajuda",
+							"sid": 786361218533608,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 298201193058764,
+							"parameters": {
+								"audio-file": "Swipe Swoosh Transition Sound Effect",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 233857781828946,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 516318690931172,
+							"parameters": {
+								"first-value": "Opcao_Inicio",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Spr_Mochila",
+							"sid": 440319717525400
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Spr_Mochila",
+							"sid": 539511111382719,
+							"parameters": {
+								"x": "511",
+								"y": "365"
+							}
+						}
+					],
+					"sid": 813012210000488
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 617836551588598,
+							"parameters": {
+								"first-value": "Opcao_Inicio",
+								"comparison": 0,
+								"second-value": "2"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Spr_Mochila",
+							"sid": 316834337378132
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Spr_Mochila",
+							"sid": 976716831156362,
+							"parameters": {
+								"x": "511",
+								"y": "486"
+							}
+						}
+					],
+					"sid": 198209677575156
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 411145933431929,
+							"parameters": {
+								"first-value": "Opcao_Inicio",
+								"comparison": 0,
+								"second-value": "3"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Spr_Mochila",
+							"sid": 363539242524452
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Spr_Mochila",
+							"sid": 484546446739649,
+							"parameters": {
+								"x": "511",
+								"y": "608"
+							}
+						}
+					],
+					"sid": 299867319911344
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 690360562527658,
+							"parameters": {
+								"first-value": "Opcao_Inicio",
+								"comparison": 2,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 468540907939851,
+							"parameters": {
+								"variable": "Opcao_Inicio",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 340462051117715
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 910321140549517,
+							"parameters": {
+								"first-value": "Opcao_Inicio",
+								"comparison": 4,
+								"second-value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 966217082909475,
+							"parameters": {
+								"variable": "Opcao_Inicio",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 392023168021445
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 723444094309623,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Spr_Mochila",
+							"sid": 876926700215583
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 437952115540613,
+							"parameters": {
+								"first-value": "Opcao_Inicio",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 401248798867173,
+							"parameters": {
+								"audio-file": "Mouse Click Sound Effect",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 394818948709591,
+							"parameters": {
+								"layout": "Mapa_Inicial"
+							}
+						}
+					],
+					"sid": 707606839759625
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 693200236514794,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Spr_Mochila",
+							"sid": 399805805369688
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 476200362551535,
+							"parameters": {
+								"first-value": "Opcao_Inicio",
+								"comparison": 0,
+								"second-value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Txt_Ajuda",
+							"sid": 515429000904761,
+							"parameters": {
+								"visibility": "toggle"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Mosaico",
+							"sid": 447914854773252,
+							"parameters": {
+								"visibility": "toggle"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 344958914992926,
+							"parameters": {
+								"audio-file": "Mouse Click Sound Effect",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 876933640417051
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 366346001993956,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 874783155118440,
+							"parameters": {
+								"first-value": "Opcao_Inicio",
+								"comparison": 0,
+								"second-value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 325735104210687,
+							"parameters": {
+								"audio-file": "Mouse Click Sound Effect",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Txt_Sair",
+							"sid": 484667970966779,
+							"parameters": {
+								"visibility": "toggle"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Text_Sair",
+							"sid": 834387604360591,
+							"parameters": {
+								"visibility": "toggle"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Spr_Mochila",
+							"sid": 854333288792532,
+							"parameters": {
+								"visibility": "toggle"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Spr_Tela_DEMO",
+							"sid": 599608690571599,
+							"parameters": {
+								"visibility": "toggle"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Text_Ajuda",
+							"sid": 877944362839086,
+							"parameters": {
+								"visibility": "toggle"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Txt_Iniciar",
+							"sid": 733296810103478,
+							"parameters": {
+								"visibility": "toggle"
+							}
+						}
+					],
+					"sid": 834786461015903
+				}
+			],
+			"sid": 135535444199572
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pontuação",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 400800834783969
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Valor_Estamina",
+					"sid": 833800183651018,
+					"parameters": {
+						"text": "Geral_Estamina"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Valor_Popularidade",
+					"sid": 745104896585321,
+					"parameters": {
+						"text": "Geral_Pop"
+					}
+				}
+			],
+			"sid": 184783931229124
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "Spr_Portal_Fase_1",
+					"sid": 332058260317943,
+					"isInverted": true
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "Spr_Portal_Fase_2",
+					"sid": 110033729239476,
+					"isInverted": true
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "Spr_Portal_Fase_3",
+					"sid": 672742023505922,
+					"isInverted": true
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "Spr_Tela_DEMO",
+					"sid": 389399353374448,
+					"isInverted": true
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "Spr_Personagem_Caminho",
+					"sid": 357751823775745,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Áudio",
+					"sid": 259402480508533,
+					"parameters": {
+						"tag": "\"Background-Tela\""
+					}
+				}
+			],
+			"sid": 164704209197423
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "Spr_Tela_DEMO",
+					"sid": 489028452908387
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 873257598667984,
+					"parameters": {
+						"variable": "Fases_Telas",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 393353213254066,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-any-playing",
+							"objectClass": "Áudio",
+							"sid": 170936808932885,
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 302504573240649,
+							"parameters": {
+								"first-value": "Fases_Telas",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 952841817005225,
+							"parameters": {
+								"audio-file": "Background-Tela",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"Background-Tela\""
+							}
+						}
+					],
+					"sid": 660644406037332
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "Spr_Portal_Fase_1",
+					"sid": 863233256865374
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 501509957530131,
+					"parameters": {
+						"variable": "Fases_Telas",
+						"value": "2"
+					}
+				}
+			],
+			"sid": 587946054625958,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-any-playing",
+							"objectClass": "Áudio",
+							"sid": 599980057497259,
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 353989143654548,
+							"parameters": {
+								"first-value": "Fases_Telas",
+								"comparison": 0,
+								"second-value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 439274378883849,
+							"parameters": {
+								"audio-file": "Background-Tela",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"Background-Tela\""
+							}
+						}
+					],
+					"sid": 272232732164332
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "Spr_Portal_Fase_2",
+					"sid": 803707811108003
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 385376853874964,
+					"parameters": {
+						"variable": "Fases_Telas",
+						"value": "3"
+					}
+				}
+			],
+			"sid": 342853254966447,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-any-playing",
+							"objectClass": "Áudio",
+							"sid": 339485289166993,
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 653429478008405,
+							"parameters": {
+								"first-value": "Fases_Telas",
+								"comparison": 0,
+								"second-value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 269170264302767,
+							"parameters": {
+								"audio-file": "Background-Tela",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"Background-Tela\""
+							}
+						}
+					],
+					"sid": 197874263906875
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "Spr_Portal_Fase_3",
+					"sid": 889856431423254
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 440706108228552,
+					"parameters": {
+						"variable": "Fases_Telas",
+						"value": "4"
+					}
+				}
+			],
+			"sid": 748009666367427,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-any-playing",
+							"objectClass": "Áudio",
+							"sid": 425781109340326,
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 541513300728709,
+							"parameters": {
+								"first-value": "Fases_Telas",
+								"comparison": 0,
+								"second-value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 594864824031245,
+							"parameters": {
+								"audio-file": "Background-Tela",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"Background-Tela\""
+							}
+						}
+					],
+					"sid": 787185484488750
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "Txt_parabens",
+					"sid": 498634676465351
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 142621955220848
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 606513089821012,
+					"parameters": {
+						"variable": "Fases_Telas",
+						"value": "5"
+					}
+				},
+				{
+					"id": "stop-all",
+					"objectClass": "Áudio",
+					"sid": 208557686922997
+				}
+			],
+			"sid": 411570930725213,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-any-playing",
+							"objectClass": "Áudio",
+							"sid": 155017692660248,
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 685565233636599,
+							"parameters": {
+								"first-value": "Fases_Telas",
+								"comparison": 0,
+								"second-value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 263002817739325,
+							"parameters": {
+								"audio-file": "Musica-Venceu",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 628086412270835
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "Spr_Portal_Fase_1",
+					"sid": 796583649907503
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "Spr_Portal_Fase_2",
+					"sid": 365802096157909
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "Spr_Portal_Fase_3",
+					"sid": 488744489442349
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 523425504630814
+				}
+			],
+			"actions": [],
+			"sid": 370340684467407,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 782655255896572
+				}
+			],
+			"actions": [],
+			"sid": 954111597393233
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 697602542855449,
+					"parameters": {
+						"variable": "Venceu_Lixo"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 813525777995912,
+					"parameters": {
+						"variable": "Venceu_Vida"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 396185935602213,
+					"parameters": {
+						"variable": "Creditos_Finais",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 173330268757680
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 637034337653907,
+					"parameters": {
+						"variable": "Creditos_Finais"
+					}
+				},
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 145551770208511
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 237731816852985,
+					"parameters": {
+						"variable": "AdicaoY",
+						"value": "0.01"
+					}
+				}
+			],
+			"sid": 237657531596155,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Txt_parabens",
+							"sid": 780083199720682,
+							"parameters": {
+								"x": "scrollx",
+								"y": "Txt_parabens.Y  + AdicaoY"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Txt_Créditos",
+							"sid": 982035438603227,
+							"parameters": {
+								"x": "scrollx",
+								"y": "Txt_Créditos.Y  + AdicaoY"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Spr_Placa_Pontuação_Pedra",
+							"sid": 719015166695424,
+							"parameters": {
+								"x": "scrollX",
+								"y": "Spr_Placa_Pontuação_Pedra.Y + AdicaoY * 200"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Text_Popularidade",
+							"sid": 983869273306850,
+							"parameters": {
+								"x": "Spr_Placa_Pontuação_Pedra.X - 135",
+								"y": "Spr_Placa_Pontuação_Pedra.Y - 30"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Text_Estamina",
+							"sid": 299386702524799,
+							"parameters": {
+								"x": "Spr_Placa_Pontuação_Pedra.X - 135",
+								"y": "Spr_Placa_Pontuação_Pedra.Y "
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Valor_Popularidade",
+							"sid": 952439001404565,
+							"parameters": {
+								"x": "Spr_Placa_Pontuação_Pedra.X + 70",
+								"y": "Spr_Placa_Pontuação_Pedra.Y - 30"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Valor_Estamina",
+							"sid": 192168990478669,
+							"parameters": {
+								"x": "Spr_Placa_Pontuação_Pedra.X + 10",
+								"y": "Spr_Placa_Pontuação_Pedra.Y"
+							}
+						}
+					],
+					"sid": 580207312591959
+				}
+			]
+		}
+	],
+	"sid": 357274801268834
+}

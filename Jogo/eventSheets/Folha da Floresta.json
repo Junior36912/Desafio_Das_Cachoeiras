@@ -1,0 +1,873 @@
+{
+	"name": "Folha da Floresta",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Venceu_Floresta_Demo",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 743976619435401
+		},
+		{
+			"eventType": "variable",
+			"name": "Valor_Popularidade",
+			"type": "number",
+			"initialValue": "50",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 647617469306403
+		},
+		{
+			"eventType": "variable",
+			"name": "Valor_Saude",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 988790900265497
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Nivel1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "HUD_Floresta",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Valor_Estamina",
+									"sid": 445612612885178,
+									"parameters": {
+										"text": "Valor_Saude"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Valor_Popularidade",
+									"sid": 997224850730095,
+									"parameters": {
+										"text": "Valor_Popularidade"
+									}
+								}
+							],
+							"sid": 507236056633064
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 149179855745473
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 176882926858567,
+									"parameters": {
+										"layer": "4",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "reset-global-variables",
+									"objectClass": "System",
+									"sid": 457709231114895,
+									"parameters": {
+										"reset-static": false
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 793350494905355,
+									"parameters": {
+										"layer": "3",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 894794854300729,
+									"parameters": {
+										"layer": "2",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 799118534410743
+						}
+					],
+					"sid": 658551095215353
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Cenario_Floresta",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-destroyed",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 996193506669242
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 658310163223392,
+									"parameters": {
+										"layer": "2",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 297036296983017
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 263037650585788,
+									"parameters": {
+										"key": 82
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 486510777335232
+								}
+							],
+							"sid": 127035958415046
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 860903963247734
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 841701645203852,
+									"parameters": {
+										"value": "Valor_Saude",
+										"lower-bound": "-100",
+										"upper-bound": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 665457791882511
+								}
+							],
+							"sid": 400871586416540
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 381617444308711,
+									"parameters": {
+										"value": "Valor_Popularidade",
+										"lower-bound": "-100",
+										"upper-bound": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 750792838903370
+								}
+							],
+							"sid": 153630122623973
+						}
+					],
+					"sid": 425941775802646
+				}
+			],
+			"sid": 195949635474115
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "BONUS_Floresta",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Pausa/Continue_Floresta",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 652760834254391,
+									"parameters": {
+										"key": 80
+									}
+								}
+							],
+							"actions": [],
+							"sid": 375777375010017,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 620810708284696,
+											"parameters": {
+												"variable": "Pausado"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-time-scale",
+											"objectClass": "System",
+											"sid": 248813103960281,
+											"parameters": {
+												"time-scale": "1.0"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 731789234663161,
+											"parameters": {
+												"variable": "Pausado",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 738489706748917
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 617910232855848
+										}
+									],
+									"actions": [
+										{
+											"id": "set-time-scale",
+											"objectClass": "System",
+											"sid": 280536928817393,
+											"parameters": {
+												"time-scale": "0"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 714309008507173,
+											"parameters": {
+												"variable": "Pausado",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 409494075123227
+								}
+							]
+						}
+					],
+					"sid": 324179111092269
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Controle_Floresta",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 665195766526849,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 414752484757868,
+									"behaviorType": "8Direções",
+									"parameters": {
+										"control": "up"
+									}
+								}
+							],
+							"sid": 157163959959191
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 578290036881382,
+									"parameters": {
+										"key": 68
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 131655598521988,
+									"parameters": {
+										"key": 39
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 104984889427189,
+									"behaviorType": "8Direções",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 432529321169257,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 257927373895754,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 325059708953216,
+									"parameters": {
+										"key": 65
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 385125903126803,
+									"parameters": {
+										"key": 37
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 477713056845341,
+									"behaviorType": "8Direções",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 567871706425967,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 847417737414974,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 260877338960092,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Spr_Personagem_Caminho",
+									"sid": 369605914577218,
+									"behaviorType": "8Direções",
+									"parameters": {
+										"control": "down"
+									}
+								}
+							],
+							"sid": 666907589365104
+						}
+					],
+					"sid": 574180005926462
+				}
+			],
+			"sid": 147759622481197
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Limpeza_Cachoeira2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 376844061391810,
+							"parameters": {
+								"object": "garrafa_dagua"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "garrafa_dagua",
+							"sid": 592969397246187
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 976315678556828,
+							"parameters": {
+								"variable": "Valor_Saude",
+								"value": "15"
+							}
+						}
+					],
+					"sid": 618325025059638
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 179968908798106,
+							"parameters": {
+								"object": "cobra"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 566928680070101,
+							"parameters": {
+								"variable": "Valor_Saude",
+								"value": "10"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 340154409978640,
+							"parameters": {
+								"variable": "Valor_Popularidade",
+								"value": "20"
+							}
+						}
+					],
+					"sid": 847964348062895
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 458209070617017,
+							"parameters": {
+								"object": "Spr_Poça_Lama"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 141621549578012,
+							"parameters": {
+								"variable": "Valor_Saude",
+								"value": "2"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 973603693316744,
+							"parameters": {
+								"variable": "Valor_Popularidade",
+								"value": "5"
+							}
+						}
+					],
+					"sid": 510474574000970
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 905535467886795,
+							"parameters": {
+								"object": "Spr_Urtiga_Grande"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 428259990723406,
+							"parameters": {
+								"variable": "Valor_Saude",
+								"value": "5"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 387842063715148,
+							"parameters": {
+								"variable": "Valor_Popularidade",
+								"value": "5"
+							}
+						}
+					],
+					"sid": 982394152849939
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 106585681562051,
+							"parameters": {
+								"object": "Spr_Folha"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 838226976642476,
+							"parameters": {
+								"variable": "Valor_Popularidade",
+								"value": "15"
+							}
+						}
+					],
+					"sid": 764762880673390
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Spr_Personagem_Caminho",
+							"sid": 565375653650197,
+							"parameters": {
+								"object": "Spr_Lixo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 267378831744077,
+							"parameters": {
+								"variable": "Valor_Popularidade",
+								"value": "25"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Spr_Lixo",
+							"sid": 921279849962141
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 148167433230722,
+							"parameters": {
+								"object-to-create": "Spr_Lixo",
+								"layer": "0",
+								"x": "random(1120, 1220)",
+								"y": "random(600, 680)",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 214111425567005
+				}
+			],
+			"sid": 402972597981190
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "Spr_Personagem_Caminho",
+					"sid": 672770560652161,
+					"parameters": {
+						"object": "Spr_Arvore_Caida",
+						"offset-x": "0",
+						"offset-y": "-2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Spr_Arvore_Caida",
+					"sid": 521505476437618,
+					"behaviorType": "MovimentoEmGrid",
+					"parameters": {
+						"control": "up"
+					}
+				}
+			],
+			"sid": 683458823217311
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "Spr_Personagem_Caminho",
+					"sid": 642937381866945,
+					"parameters": {
+						"object": "Spr_Arvore_Caida",
+						"offset-x": "0",
+						"offset-y": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Spr_Arvore_Caida",
+					"sid": 388990018058514,
+					"behaviorType": "MovimentoEmGrid",
+					"parameters": {
+						"control": "down"
+					}
+				}
+			],
+			"sid": 661856523493785
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "Spr_Personagem_Caminho",
+					"sid": 652471993087022,
+					"parameters": {
+						"object": "Spr_Arvore_Caida",
+						"offset-x": "2",
+						"offset-y": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Spr_Arvore_Caida",
+					"sid": 316257748831301,
+					"behaviorType": "MovimentoEmGrid",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 632095671213311
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "Spr_Personagem_Caminho",
+					"sid": 515187075406563,
+					"parameters": {
+						"object": "Spr_Arvore_Caida",
+						"offset-x": "-2",
+						"offset-y": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Spr_Arvore_Caida",
+					"sid": 961747113328105,
+					"behaviorType": "MovimentoEmGrid",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 754820336897765
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 221612438613728,
+					"parameters": {
+						"variable": "Venceu_Floresta_Demo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 625648438381212,
+					"parameters": {
+						"layer": "4",
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 629532372845198
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 915273226195292
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 913461003622350,
+					"parameters": {
+						"layer": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 796185022977052,
+					"parameters": {
+						"layout": "Mapa_Fim"
+					}
+				}
+			],
+			"sid": 887981800378830
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 869422668200823,
+					"parameters": {
+						"layer": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Spr_Personagem_Caminho",
+					"sid": 619282007344602,
+					"parameters": {
+						"x": "1500",
+						"y": "240"
+					}
+				}
+			],
+			"sid": 258026747636283
+		}
+	],
+	"sid": 409652354202864
+}
