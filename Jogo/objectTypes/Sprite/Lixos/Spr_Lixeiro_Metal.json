@@ -1,0 +1,58 @@
+{
+	"name": "Spr_Lixeiro_Metal",
+	"plugin-id": "Sprite",
+	"sid": 937741646909464,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 39,
+						"height": 65,
+						"originX": 0.5,
+						"originY": -0.04813895781637717,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9037748,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.015384615384615385,
+								1,
+								0.015384615384615385,
+								1,
+								0.015384615384615385,
+								1,
+								0.30918114143920594,
+								1,
+								0.9920595533498759,
+								0,
+								0.9444168734491316,
+								0,
+								0.3131513647642678,
+								0,
+								0.015384615384615385
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 237297941150555,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,58 @@
+{
+	"name": "Spr_Lixeiro_Vidro",
+	"plugin-id": "Sprite",
+	"sid": 874475899152245,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 39,
+						"height": 66,
+						"originX": 0.48717948717948717,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8729893,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.015151515151515152,
+								0.8420512820512818,
+								0.015151515151515152,
+								0.9677435897435895,
+								0.015151515151515152,
+								0.9677435897435895,
+								0.3044965786901271,
+								0.7692820512820512,
+								0.97702834799609,
+								0,
+								0.9301075268817205,
+								0,
+								0.3084066471163243,
+								0,
+								0.015151515151515152
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 681102078619461,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

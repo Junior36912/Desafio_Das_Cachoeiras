@@ -1,0 +1,58 @@
+{
+	"name": "Spr_Lixeiro_Papel",
+	"plugin-id": "Sprite",
+	"sid": 150842380597219,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 37,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7493648,
+						"collisionPoly": {
+							"points": [
+								0.2421621621621622,
+								0.004032258064516129,
+								1,
+								0.05241935483870968,
+								1,
+								0.25,
+								1,
+								1,
+								1,
+								1,
+								0.15221621621621612,
+								1,
+								0.006918918918918919,
+								1,
+								0.006918918918918919,
+								0.24596774193548387
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 531229278628139,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,62 @@
+{
+	"name": "Spr_Lixo_Papel",
+	"plugin-id": "Sprite",
+	"sid": 166012473499071,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastarSoltar",
+			"sid": 516546024788561
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 65,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.45,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6322841,
+						"collisionPoly": {
+							"points": [
+								0.6146723646723646,
+								0.1291666666666666,
+								0.7343304843304844,
+								0.262037037037037,
+								0.9237891737891738,
+								0.7319444444444446,
+								0.6670227920227918,
+								0.9685185185185183,
+								0.1260683760683761,
+								0.8777777777777779,
+								0.018874643874643864,
+								0.6476851851851851,
+								0.3105413105413106,
+								0.08055555555555553
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 615175102481248,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

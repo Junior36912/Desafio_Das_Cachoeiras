@@ -1,0 +1,62 @@
+{
+	"name": "Spr_Lixo_Plastico_1",
+	"plugin-id": "Sprite",
+	"sid": 634194513444159,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastarSoltar",
+			"sid": 582609947286862
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 25,
+						"originX": 0.5,
+						"originY": 0.44,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4629467,
+						"collisionPoly": {
+							"points": [
+								0.5169753086419753,
+								0.033670033670033656,
+								0.7870370370370371,
+								0.12401795735129066,
+								0.9305555555555555,
+								0.909652076318743,
+								0.763888888888889,
+								0.9607182940516273,
+								0.40895061728395055,
+								0.9744668911335577,
+								0.16203703703703706,
+								0.9489337822671157,
+								0.03395061728395065,
+								0.7996632996632997
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 230957236203052,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,58 @@
+{
+	"name": "Spr_Lixeiro_Organico",
+	"plugin-id": "Sprite",
+	"sid": 792255706084876,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 38,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.515625,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8669305,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.004032258064516129,
+								1,
+								0.05241935483870968,
+								1,
+								0.25,
+								1,
+								1,
+								1,
+								1,
+								0,
+								1,
+								0,
+								1,
+								0,
+								0.24596774193548387
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 173377721609636,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,66 @@
+{
+	"name": "Spr_Lixo_Vidro_1",
+	"plugin-id": "Sprite",
+	"sid": 310989585085413,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastarSoltar",
+			"sid": 667784079658504
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 50,
+						"height": 41,
+						"originX": 0.48,
+						"originY": 0.4634146341463415,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6053433,
+						"collisionPoly": {
+							"points": [
+								0.5127777777777779,
+								0,
+								0.9418518518518519,
+								0.5182926829268293,
+								0.9625925925925926,
+								0.6384372177055103,
+								0.8977777777777777,
+								0.7285456187895213,
+								0.8005555555555556,
+								0.7854561878952122,
+								0.4375925925925926,
+								0.7933604336043361,
+								0.3351851851851852,
+								0.7838753387533874,
+								0.15888888888888889,
+								0.7396115627822943,
+								0.11092592592592591,
+								0.5103884372177057
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 292887494630184,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
