@@ -1,0 +1,15 @@
+{
+	"name": "Text_Sair",
+	"plugin-id": "Text",
+	"sid": 421167119910407,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 737921868878779
+		}
+	],
+	"effectTypes": []
+}

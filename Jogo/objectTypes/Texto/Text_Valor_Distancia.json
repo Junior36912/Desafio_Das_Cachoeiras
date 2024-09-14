@@ -1,0 +1,24 @@
+{
+	"name": "Text_Valor_Distancia",
+	"plugin-id": "Text",
+	"sid": 431629766775075,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Distancia_Local",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 876756388687770
+		},
+		{
+			"name": "Valor_Distancia",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 921422878786204
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

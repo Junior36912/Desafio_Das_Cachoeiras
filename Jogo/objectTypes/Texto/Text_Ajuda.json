@@ -1,0 +1,15 @@
+{
+	"name": "Text_Ajuda",
+	"plugin-id": "Text",
+	"sid": 989751964552125,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 210674953322256
+		}
+	],
+	"effectTypes": []
+}

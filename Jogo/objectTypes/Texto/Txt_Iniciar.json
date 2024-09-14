@@ -1,0 +1,15 @@
+{
+	"name": "Txt_Iniciar",
+	"plugin-id": "Text",
+	"sid": 192507323154079,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 133280955184475
+		}
+	],
+	"effectTypes": []
+}
