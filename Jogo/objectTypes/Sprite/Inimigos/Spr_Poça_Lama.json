@@ -1,0 +1,70 @@
+{
+	"name": "Spr_Poça_Lama",
+	"plugin-id": "Sprite",
+	"sid": 680504476613484,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 60,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2278895,
+						"collisionPoly": {
+							"points": [
+								0.46875,
+								0.016666666666666666,
+								0.53125,
+								0.016666666666666666,
+								0.734375,
+								0.08333333333333333,
+								0.875,
+								0.18333333333333332,
+								0.953125,
+								0.3,
+								0.984375,
+								0.5,
+								0.96875,
+								0.7,
+								0.859375,
+								0.9,
+								0.515625,
+								0.9666666666666667,
+								0.1875,
+								0.9,
+								0.03125,
+								0.75,
+								0.015625,
+								0.4,
+								0.046875,
+								0.26666666666666666,
+								0.203125,
+								0.11666666666666667
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 461160866210858,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

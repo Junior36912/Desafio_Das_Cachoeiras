@@ -1,0 +1,76 @@
+{
+	"name": "Spr_Urtiga_Seca",
+	"plugin-id": "Sprite",
+	"sid": 515155031803799,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 480746817942829
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3980502,
+						"collisionPoly": {
+							"points": [
+								0.4375,
+								0.046875,
+								0.75,
+								0.0625,
+								0.953125,
+								0.265625,
+								0.984375,
+								0.53125,
+								0.953125,
+								0.703125,
+								0.921875,
+								0.796875,
+								0.828125,
+								0.859375,
+								0.65625,
+								0.921875,
+								0.296875,
+								0.984375,
+								0.09375,
+								0.859375,
+								0.015625,
+								0.6875,
+								0.03125,
+								0.34375,
+								0.09375,
+								0.265625,
+								0.25,
+								0.109375
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 228679867880895,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

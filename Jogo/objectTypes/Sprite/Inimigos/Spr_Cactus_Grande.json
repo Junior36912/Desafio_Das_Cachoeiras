@@ -1,0 +1,78 @@
+{
+	"name": "Spr_Cactus_Grande",
+	"plugin-id": "Sprite",
+	"sid": 293364474793276,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 424278334353516
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 512,
+						"height": 531,
+						"originX": 0.5040772147038487,
+						"originY": 0.4708216456367198,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6851785,
+						"collisionPoly": {
+							"points": [
+								0.6071133259644256,
+								0,
+								0.8131855484855789,
+								0,
+								1,
+								0.1957233469904717,
+								1,
+								0.2976116057483415,
+								1,
+								0.41987751625778497,
+								1,
+								0.725542292531394,
+								0.9574361042503863,
+								0.990451765301855,
+								0.8337927707376943,
+								1,
+								0.6277205482165409,
+								1,
+								0.31861221443481097,
+								1,
+								0,
+								0.8681858547924113,
+								0,
+								0.6847869890282461,
+								0,
+								0.15496804348732393,
+								0.009503880653080844,
+								0,
+								0.38043388119115695,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 301762752404324,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
