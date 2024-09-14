@@ -45,7 +45,7 @@ Para começar, baixe o jogo e mergulhe na aventura através das trilhas e cachoe
 ### 2. Importe um Projeto Existente:
 - Clique no botão "Open project".
 - Navegue até a pasta onde seu projeto está salvo.
-- Selecione a pasta do projeto no local salvo e abra-o.
+- Selecione a pasta do projeto no local salvo, em seguida, na pasta "Jogo", abra e selecione-o.
 
 
 Obrigado por conferir o "Desafio das Cachoeiras"! 🌟 Se você tiver alguma dúvida ou feedback, fique à vontade para abrir uma issue ou contribuir com o projeto. 🎮🌿
