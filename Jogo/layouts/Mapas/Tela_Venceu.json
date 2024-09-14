@@ -1,0 +1,742 @@
+{
+	"name": "Tela_Venceu",
+	"layers": [
+		{
+			"name": "Camada 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Mosaico2",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 268,
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 40,
+							"height": 14,
+							"max-width": 88,
+							"max-height": 60,
+							"data": "3x4,4v,18x4,4vd,37x0,4,20x65,4,38x0,4,7x65,4x71,68,8x65,4,38x0,4,65,3x71,65,2x68,71,2x65,71,65,68,5x65,38,65,4,38x0,4,65,71,3x65,68,2x65,71,4x65,68,4x65,38,65,4,38x0,4,65,71,3x65,68,65,2x71,4x65,68,4x65,38,65,4,38x0,4,65,71,3x65,2x68,71,65,3x38,2x65,68,3x65,38,65,4,38x0,4,5x65,68,2x65,38,65,2x71,38,65,68,2x65,2x38,65,4,38x0,4,20x65,4,41vd,37x0,4,20x65,4,38x0,4,65,3x71,65,3x71,2x65,2x71,65,2x71,65,3x71,65,4,41vd,37x0,4,65,71,3x65,71,4x65,71,2x65,71,2x65,71,3x65,4,41vd,37x0,4,65,71,3x65,71,4x65,71,2x65,71,2x65,71,3x65,4,41vd,37x0,4,65,71,3x65,71,4x65,71,2x65,71,2x65,71,3x65,4,41vd,37x0,4,20x65,4,41vd,37x0,4,8x65,68,10x65,68,4,41vd,37x0,4,3x65,68,3x65,68,38,9x65,68,38,4,41vd,37x0,4,2x65,2x71,2x65,2x71,68,2x65,71,2x65,71,2x65,2x71,68,4,41vd,37x0,4,2x65,71,3x65,71,4x65,71,2x65,71,2x65,71,2x65,4,41vd,37x0,4,2x65,71,3x65,71,4x65,71,2x65,71,2x65,71,2x65,4,41vd,37x0,4,2x65,2x71,2x65,2x71,3x65,71,2x65,71,2x65,2x71,65,4,41vd,37x0,4,3x65,71,3x65,2x71,9x65,2x71,4,41vd,37x0,4,2x65,38,3x65,38,65,71,2x65,38,2x65,38,2x65,38,65,71,4,41vd,37x0,4,2x65,38,3x65,38,65,71,2x65,38,2x65,38,2x65,38,65,71,4,41vd,37x0,4,65,38,71,2x65,38,71,65,71,65,38,71,65,38,71,65,38,71,65,71,4,41vd,37x0,4,65,71,3x65,71,2x65,71,65,71,2x65,71,2x65,71,2x65,71,4,41vd,37x0,4,65,38,3x65,38,2x65,71,65,38,2x65,38,2x65,38,2x65,71,4,41vd,37x0,4,65,38,65,71,65,38,65,71,2x65,38,2x65,38,2x65,38,65,71,65,4,41vd,37x0,4,65,38,65,71,65,38,65,2x71,65,38,2x65,38,2x65,38,65,2x71,4,41vd,37x0,4,3x65,38,3x65,38,10x65,38,65,4,41vd,37x0,4,8x65,71,10x65,71,4,41vd,37x0,4,38,65,71,65,38,65,71,2x65,38,65,71,38,65,71,38,65,71,2x65,4,41vd,37x0,4,38,3x68,38,4x68,38,2x68,38,2x68,38,4x68,4,41vd,37x0,4,38,71,65,68,38,71,65,68,65,38,71,65,38,71,65,38,71,65,68,65,4,41vd,37x0,4,65vd,3x68,65vd,3x68,2x65vd,2x68,65vd,2x68,65vd,3x68,65vd,4,41vd,37x0,4,65vd,2x68,2x65vd,2x68,3x65vd,2x68,65vd,2x68,65vd,2x68,2x65vd,4,41vd,37x0,4,65vd,2x68,2x65vd,2x68,65vd,38,65vd,2x68,65vd,2x68,65vd,2x68,65vd,38,4,41vd,37x0,4,65,2x68,38,65,2x68,2x38,65,2x68,65,2x68,65,2x68,2x38,4,4vd,37x0,4,20x68,4,4vd,37x0,22x4,4vd,37x0,41vd,38,4x41,16x38,41vd,37x0,41vd,41,14x38,1,5x70,41vd,37x0,41vd,9x38,1,5x70,1,5x65,41vd,37x0,41vd,5x38,1,2x70,2x1,11x65,41vd,37x0,41vd,2x38,1,2x70,1,2x68,13x65,41vd,37x0,41vd,2x70,1,18x65,41vd,37x0,41vd,21x65,41vd,37x0,41vd,21x65,41vd,37x0,23x41vd,2377x0"
+						},
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 1280,
+						"height": 462.08461078735905,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mosaico3",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 269,
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 40,
+							"height": 11,
+							"max-width": 83,
+							"max-height": 48,
+							"data": "24x4,24x0,68,22x38,4,25x0,38,2x65,38,65,71,38,8x65,3x38,65,71,65,38,4,25x0,38,2x65,38,65,71,38,3x65,38,3x65,5x68,71,65,38,4,25x0,38,65,68,38,65,71,38,3x65,38,3x65,68,3x65,71,68,65,38,4,25x0,71,0,68,38,65,71,38,3x65,5x38,65,3x71,2x68,38,4,27x0,2x68,71,7x68,38,3x71,3x65,2x68,38,4,26x0,3x65,71,38,4x65,3x71,4x65,2x68,65,2x38,4,26x0,3x71,2x38,2x65,71,65,71,65,38,2x68,65,2x68,2x65,2x38,4,26x0,3x65,2x38,65,2x71,65,38,65,38,65,2x68,3x65,38,65,38,4,25x0,38,3x65,2x38,2x71,2x65,38,65,38,3x65,2x38,3x68,38,4,25x0,38,65,2x68,65,38,3x65,2x38,65,38,3x65,38,2x68,38,65,38,4,25x0,38,2x65,71,2x68,3x65,38,2x65,38,71,4x68,38,2x65,38,4,24x0,68,38,2x65,71,2x38,65,2x68,38,3x68,71,68,65,3x38,2x65,38,4,3x0,4,20x0,68,38,2x65,71,2x38,65,71,65,38,2x65,38,3x65,3x38,2x65,38,2x4,23x0,68,38,2x65,71,2x38,3x65,38,2x65,2x38,65,71,65,3x71,65,38,4,24x0,68,38,65,2x71,2x38,3x65,38,2x65,2x38,71,65,3x38,71,65,38,4,24x0,68,38,65,71,2x65,38,3x65,38,65,2x71,38,3x65,2x38,2x65,38,4,24x0,68,38,71,2x65,5x68,38,71,65,2x38,2x65,3x38,2x65,38,4,27x0,65,68,71,38,3x65,71,2x65,2x38,2x65,38,65,38,65,68,38,4,27x0,65,68,65,38,65,2x71,2x68,65,2x38,4x65,2x68,65,38,4,24x0,68,38,0,68,65,2x38,65,71,65,38,7x68,65,38,65,2x38,4,24x0,68,38,0,68,65,2x38,71,2x65,38,65,71,65,38,71,65,38,65,38,65,2x38,4,24x0,68,38,3x65,2x38,71,2x65,38,2x65,2x38,2x65,38,65,38,65,2x38,4,25x0,38,4x65,38,71,2x65,38,3x65,38,4x65,4x38,2x4,24x0,38,3x65,71,65,71,2x65,38,3x65,38,2x65,71,65,4x38,2x4,24x0,38,3x65,2x38,2x65,3x68,2x65,38,65,71,38,2x71,3x38,2x4,24x0,38,68,2x65,38,2x71,2x68,38,65,2x68,2x71,3x68,4x38,2x4,24x0,68,65,3x68,38,71,3x65,38,65,2x71,2x65,38,65,4x38,2x4,24x0,68,3x65,2x38,71,3x65,38,65,71,38,65,38,65,68,4x38,2x4,24x0,68,3x65,2x38,71,3x65,2x38,71,38,65,38,65,5x38,2x4,26x0,3x65,68,71,4x68,71,68,2x38,65,68,5x38,4,26x0,4x68,71,5x65,71,38,4x68,5x38,4,26x0,3x65,38,71,5x65,71,2x38,65,68,6x38,4,25x0,38,3x65,38,71,3x65,3x71,2x38,65,68,6x38,4,24x0,68,0,3x65,38,71,38,3x65,71,65,2x38,68,7x38,4,24x0,68,38,2x68,2x65,71,38,2x65,71,5x68,7x38,4,24x0,68,38,3x68,2x71,5x68,2x65,2x68,7x38,4,24x0,68,38,4x71,2x65,3x38,2x65,68,38,68,7x38,4,25x0,11x4,65,68,38,68,7x38,4,35x0,12x38,4,47x0,4,34x0,14x4,47x0,4,1896x0"
+						},
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 191.48586349552335,
+						"width": 1294,
+						"height": 357.51413650447665,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mosaico",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 267,
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 40,
+							"height": 9,
+							"max-width": 123,
+							"max-height": 82,
+							"data": "9x4,7x0,6x4,61x0,7x68,4,7x0,68,2x65,2x71,4,61x0,7x68,4,8x0,65,68,71,65,4,61x0,7x68,4,8x0,71,2x65,68,4,62x0,6x68,4,9x0,71,2x65,4,61x0,7x68,4,10x0,68,65,4,61x0,7x68,4,10x0,2x68,4,61x0,7x68,4,11x0,65,4,61x0,7x68,4,73x0,8x68,4,73x0,8x68,4,73x0,8x68,4,73x0,8x68,4,73x0,8x68,4,73x0,8x68,4,73x0,8x68,4,74x0,7x68,4,75x0,6x68,4,75x0,6x68,4,75x0,6x68,4,74x0,7x68,4,74x0,7x68,4,74x0,7x68,4,74x0,7x68,4,73x0,8x68,4,73x0,8x68,4,73x0,8x68,4,73x0,8x68,4,73x0,8x68,4,73x0,8x68,4,73x0,8x68,4,74x0,7x68,4,74x0,7x68,4,76x0,5x68,4,76x0,5x68,4,75x0,6x68,4,74x0,7x68,4,73x0,8x68,4,73x0,8x68,4,73x0,9x4,74x0,68,81x0,68,6722x0"
+						},
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0.7081203184712592,
+						"y": 414.7197528910094,
+						"width": 1280,
+						"height": 300.084611,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Txt_parabens",
+					"properties": {
+						"text": "PARABÉNS!                                                         \n VOCÊ CONCLUIU O JOGO!",
+						"enable-bbcode": true,
+						"font": "CooperBits",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top",
+						"read-aloud": false
+					},
+					"uid": 270,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 640,
+						"y": 764,
+						"width": 1020,
+						"height": 337,
+						"originX": 0.5,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Txt_Créditos",
+					"properties": {
+						"text": "- CRÉDITOS -                                                                                                                         \n                                                        \n DESENVOLVEDOR: JÚNIOR JACKSON                            \n ART DESIGN: RAIANA SANTOS                                                                                       \n                                                            \n BACKSTAGE: JOÃO MARCOS",
+						"enable-bbcode": true,
+						"font": "CooperBits",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top",
+						"read-aloud": false
+					},
+					"uid": 271,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 611.5,
+						"y": 1129,
+						"width": 1085,
+						"height": 459,
+						"originX": 0.5,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Spr_Fundo_Preto",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 411,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 656.1412385789863,
+						"y": 706.4338427634491,
+						"width": 1322.2824771579726,
+						"height": 64.86768552689807,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Spr_Placa_Pontuação_Pedra",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 412,
+					"instanceVariables": {},
+					"behaviors": {
+						"Âncora": {
+							"properties": {
+								"left-edge": "window-left",
+								"top-edge": "window-top",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 654,
+						"y": 428,
+						"width": 350,
+						"height": 128,
+						"originX": 0.5028571428571429,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text_Estamina",
+					"properties": {
+						"text": "Estamina: ",
+						"enable-bbcode": true,
+						"font": "CooperBits",
+						"size": 20,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 413,
+					"instanceVariables": {
+						"Numero_Distancia": 20
+					},
+					"behaviors": {},
+					"world": {
+						"x": 507,
+						"y": 420,
+						"width": 148.06151412988797,
+						"height": 36,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Valor_Estamina",
+					"properties": {
+						"text": "XXXX",
+						"enable-bbcode": true,
+						"font": "CooperBits",
+						"size": 20,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 4750,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 650,
+						"y": 420,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text_Popularidade",
+					"properties": {
+						"text": "Popularidade:",
+						"enable-bbcode": true,
+						"font": "CooperBits",
+						"size": 20,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 4765,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 508,
+						"y": 388,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Valor_Popularidade",
+					"properties": {
+						"text": "XXXX",
+						"enable-bbcode": true,
+						"font": "CooperBits",
+						"size": 20,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 4768,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 711,
+						"y": 388,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 896484508533007,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.5019607843137255,
+				0.5019607843137255,
+				0.5019607843137255,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Camada 1",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Spr_Fundo_Preto",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 5333,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 661,
+						"y": 0,
+						"width": 1322.2824771579726,
+						"height": 64.86768552689807,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mosaico2",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 272,
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 40,
+							"height": 14,
+							"max-width": 88,
+							"max-height": 60,
+							"data": "3x4,4v,18x4,4vd,37x0,4,19x0,65,4,38x0,4,19x0,65,4,38x0,4,19x0,65,4,38x0,4,19x0,65,4,38x0,4,19x0,65,4,38x0,4,19x0,65,4,38x0,4,19x0,65,4,38x0,4,19x0,65,4,41vd,37x0,4,19x0,65,4,38x0,4,19x0,65,4,41vd,37x0,4,19x0,65,4,41vd,37x0,4,19x0,65,4,41vd,37x0,4,19x0,65,4,41vd,37x0,4,19x0,65,4,41vd,37x0,4,19x0,68,4,41vd,37x0,4,19x0,38,4,41vd,37x0,4,19x0,68,4,41vd,37x0,4,19x0,65,4,41vd,37x0,4,19x0,65,4,41vd,37x0,4,19x0,65,4,41vd,37x0,4,19x0,71,4,41vd,37x0,4,19x0,71,4,41vd,37x0,4,19x0,71,4,41vd,37x0,4,19x0,71,4,41vd,37x0,4,19x0,71,4,41vd,37x0,4,19x0,71,4,41vd,37x0,4,19x0,65,4,41vd,37x0,4,19x0,71,4,41vd,37x0,4,19x0,65,4,41vd,37x0,4,19x0,71,4,41vd,37x0,4,19x0,65,4,41vd,37x0,4,19x0,68,4,41vd,37x0,4,19x0,65,4,41vd,37x0,4,19x0,65vd,4,41vd,37x0,4,19x0,65vd,4,41vd,37x0,4,19x0,38,4,41vd,37x0,4,19x0,38,4,4vd,37x0,4,19x0,68,4,4vd,37x0,22x4,4vd,37x0,41vd,38,4x41,16x38,41vd,37x0,41vd,41,14x38,1,5x70,41vd,37x0,41vd,9x38,1,5x70,1,5x65,41vd,37x0,41vd,5x38,1,2x70,2x1,11x65,41vd,37x0,41vd,2x38,1,2x70,1,2x68,13x65,41vd,37x0,41vd,2x70,1,18x65,41vd,37x0,41vd,21x65,41vd,37x0,41vd,21x65,41vd,37x0,23x41vd,2377x0"
+						},
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 1,
+						"width": 1280,
+						"height": 462.08461078735905,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mosaico3",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 273,
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 40,
+							"height": 11,
+							"max-width": 83,
+							"max-height": 48,
+							"data": "24x4,41x0,6x38,4,41x0,2x38,65,71,65,38,4,41x0,3x68,71,65,38,4,41x0,2x65,71,68,65,38,4,41x0,3x71,2x68,38,4,41x0,3x65,2x68,38,4,41x0,65,2x68,65,2x38,4,41x0,2x68,2x65,2x38,4,41x0,3x65,38,65,38,4,41x0,2x38,3x68,38,4,41x0,38,2x68,38,65,38,4,41x0,2x68,38,2x65,38,4,41x0,3x38,2x65,38,4,3x0,4,37x0,3x38,2x65,38,2x4,40x0,65,3x71,65,38,4,41x0,3x38,71,65,38,4,41x0,65,2x38,2x65,38,4,41x0,3x38,2x65,38,4,41x0,38,65,38,65,68,38,4,41x0,2x65,2x68,65,38,4,41x0,68,65,38,65,2x38,4,41x0,38,65,38,65,2x38,4,41x0,38,65,38,65,2x38,4,41x0,2x65,4x38,2x4,40x0,71,65,4x38,2x4,40x0,38,2x71,3x38,2x4,40x0,2x68,4x38,2x4,40x0,38,65,4x38,2x4,40x0,65,68,4x38,2x4,40x0,65,5x38,2x4,40x0,68,5x38,4,41x0,68,5x38,4,41x0,6x38,4,41x0,6x38,4,41x0,6x38,4,41x0,6x38,4,41x0,6x38,4,39x0,68,7x38,4,25x0,11x4,65,68,38,68,7x38,4,35x0,12x38,4,47x0,4,34x0,14x4,47x0,4,1896x0"
+						},
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 192,
+						"width": 1305,
+						"height": 357.51413650447665,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mosaico",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 274,
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 40,
+							"height": 10,
+							"max-width": 123,
+							"max-height": 83,
+							"data": "9x4,7x0,6x4,69x0,4,7x0,68,2x65,2x71,4,69x0,4,8x0,65,68,71,65,4,69x0,4,8x0,71,2x65,68,4,69x0,4,9x0,71,2x65,4,69x0,4,10x0,68,65,4,69x0,4,10x0,2x68,4,69x0,4,11x0,65,4,69x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,82x0,4,74x0,9x4,75x0,68,82x0,68,6804x0"
+						},
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 416,
+						"width": 1280,
+						"height": 350.084611,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 823402692270437,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.5019607843137255,
+				0.5019607843137255,
+				0.5019607843137255,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 583138585777010,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 2560,
+	"height": 1440,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "Folha Tela Inicial"
+}
