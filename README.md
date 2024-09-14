@@ -1,4 +1,4 @@
-<img src="URL_da_Imagem" alt="Texto Alternativo">
+<img src="capa.png" alt="Texto Alternativo">
 
 # Desafio_Das_Cachoeiras
 
