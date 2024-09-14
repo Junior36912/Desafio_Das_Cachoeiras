@@ -1,0 +1,21 @@
+{
+	"name": "FonteDeSprites",
+	"plugin-id": "Spritefont2",
+	"sid": 206373159964010,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 128,
+		"height": 256,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 890021,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

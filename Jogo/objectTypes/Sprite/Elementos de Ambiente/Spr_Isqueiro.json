@@ -1,0 +1,64 @@
+{
+	"name": "Spr_Isqueiro",
+	"plugin-id": "Sprite",
+	"sid": 742699565769213,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoverPara",
+			"sid": 870702473722166
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 9,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.4732142857142857,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6052493,
+						"collisionPoly": {
+							"points": [
+								0.6889222842421641,
+								0.015669822145725765,
+								0.8469300128810648,
+								0.06766351118760758,
+								0.9293688278231,
+								0.13629518072289157,
+								0.9705882352941176,
+								0.2797977624784854,
+								0.9705882352941176,
+								0.9910714285714286,
+								0.16680978960927437,
+								0.9910714285714286,
+								0.029411764705882353,
+								0.9785929432013768,
+								0.029411764705882353,
+								0.3193129661503155
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 341628024548464,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

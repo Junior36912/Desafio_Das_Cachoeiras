@@ -1,0 +1,79 @@
+{
+	"name": "Spr_Madeira_4",
+	"plugin-id": "Sprite",
+	"sid": 503006537083579,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastarSoltar",
+			"sid": 280150373457652
+		},
+		{
+			"behaviorId": "bound",
+			"name": "RestritoAoLayout",
+			"sid": 237924765704503
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5764444,
+						"collisionPoly": {
+							"points": [
+								0.21875,
+								0,
+								0.875,
+								0,
+								0.9375,
+								0.0625,
+								0.96875,
+								0.125,
+								1,
+								0.25,
+								1,
+								0.75,
+								0.5625,
+								1,
+								0.40625,
+								1,
+								0.0625,
+								0.9375,
+								0,
+								0.875,
+								0,
+								0.375,
+								0.03125,
+								0.25,
+								0.125,
+								0.0625
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 725033603979129,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

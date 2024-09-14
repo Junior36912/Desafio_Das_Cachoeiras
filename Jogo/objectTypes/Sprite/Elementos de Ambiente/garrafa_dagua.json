@@ -1,0 +1,69 @@
+{
+	"name": "garrafa_dagua",
+	"plugin-id": "Sprite",
+	"sid": 837304307791321,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastarSoltar",
+			"sid": 564679886505968
+		},
+		{
+			"behaviorId": "Persist",
+			"name": "Persistir",
+			"sid": 649180105378870
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 64,
+						"originX": 0.6875,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6955961,
+						"collisionPoly": {
+							"points": [
+								0.23805732484076433,
+								0.04435782596982758,
+								1,
+								0.06367860991379311,
+								1,
+								0.2966645339439655,
+								1,
+								0.9297043372844828,
+								1,
+								0.9626633216594828,
+								0,
+								0.9626633216594828,
+								0,
+								0.9058374865301724,
+								0,
+								0.2966645339439655
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 673262762491592,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

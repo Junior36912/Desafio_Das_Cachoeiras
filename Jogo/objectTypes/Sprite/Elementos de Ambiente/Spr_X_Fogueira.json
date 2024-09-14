@@ -1,0 +1,56 @@
+{
+	"name": "Spr_X_Fogueira",
+	"plugin-id": "Sprite",
+	"sid": 164229507480811,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "scrollto",
+			"name": "CentrarEm",
+			"sid": 585596385816744
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 182846,
+						"collisionPoly": {
+							"points": [
+								0.770178530092362,
+								0.16982142867463998,
+								0.753303772716818,
+								0.6938392937647837,
+								0.31857177402035103,
+								0.6773214036458493,
+								0.309910693720821,
+								0.1910714389828895
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 282050870095003,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

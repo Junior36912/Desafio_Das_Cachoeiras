@@ -1,0 +1,50 @@
+{
+	"name": "Spr_Cerca_1",
+	"plugin-id": "Sprite",
+	"sid": 592967090576227,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 90,
+						"height": 90,
+						"originX": -0.8222222222222222,
+						"originY": 0.3,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6292326,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.011111111111111112,
+								1,
+								0.011111111111111112,
+								1,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 793618003801512,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

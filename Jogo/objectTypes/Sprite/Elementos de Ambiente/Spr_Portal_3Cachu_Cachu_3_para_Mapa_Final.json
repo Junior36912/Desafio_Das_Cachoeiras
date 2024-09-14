@@ -1,0 +1,118 @@
+{
+	"name": "Spr_Portal_3Cachu_Cachu_3_para_Mapa_Final",
+	"plugin-id": "Sprite",
+	"sid": 998960173518070,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 98,
+						"height": 30,
+						"originX": 0.5102040816326531,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 560243,
+						"collisionPoly": {
+							"points": [
+								0.5102040816326531,
+								0.03333333333333333,
+								0.7857142857142857,
+								0.06666666666666667,
+								0.9897959183673469,
+								0.3333333333333333,
+								0.8979591836734694,
+								1,
+								0.07142857142857142,
+								1,
+								0.04081632653061224,
+								0.36666666666666664,
+								0.23469387755102042,
+								0.13333333333333333
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 100,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8915913,
+						"collisionPoly": {
+							"points": [
+								0.5253061224489796,
+								0.10888888888888888,
+								0.8035714285714286,
+								0.21777777777777776,
+								1,
+								1,
+								0.9169387755102041,
+								1,
+								0.08214285714285713,
+								1,
+								0.051224489795918364,
+								1,
+								0.2470408163265306,
+								0.43555555555555553
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 99,
+						"height": 30,
+						"originX": 0.5050505050505051,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2179512,
+						"collisionPoly": {
+							"points": [
+								0.5050505050505051,
+								0.03333333333333333,
+								0.7777777777777778,
+								0.06666666666666667,
+								0.9797979797979798,
+								0.3333333333333333,
+								0.8888888888888888,
+								1,
+								0.0707070707070707,
+								1,
+								0.0404040404040404,
+								0.36666666666666664,
+								0.23232323232323232,
+								0.13333333333333333
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 244943793661957,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": true,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 3
+			}
+		],
+		"subfolders": []
+	}
+}
