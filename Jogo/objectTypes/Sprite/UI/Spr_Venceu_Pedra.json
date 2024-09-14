@@ -1,0 +1,54 @@
+{
+	"name": "Spr_Venceu_Pedra",
+	"plugin-id": "Sprite",
+	"sid": 639960849572053,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 722,
+						"height": 720,
+						"originX": 0.5436288088642659,
+						"originY": 0.49722222222222223,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8606797,
+						"collisionPoly": {
+							"points": [
+								0.04709141274238227,
+								0.002777777777777778,
+								0.9958448753462604,
+								0.03888888888888889,
+								0.9958448753462604,
+								0.25416666666666665,
+								0.814404432132964,
+								0.9986111111111111,
+								0.14265927977839335,
+								0.9569444444444445,
+								0.002770083102493075,
+								0.24861111111111112
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 289415721420159,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"name": "Spr_Placa_Pontuação_Areia",
+	"plugin-id": "Sprite",
+	"sid": 624852447354736,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 177,
+						"height": 66,
+						"originX": 0.4971751412429379,
+						"originY": 0.48484848484848486,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5552127,
+						"collisionPoly": {
+							"points": [
+								0.005649717514124294,
+								0.015151515151515152,
+								1,
+								0.015151515151515152,
+								1,
+								0.9848484848484849,
+								0.005649717514124294,
+								0.9848484848484849
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 374461374355693,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

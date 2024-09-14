@@ -1,0 +1,50 @@
+{
+	"name": "Spr_Dialogo_Barro",
+	"plugin-id": "Sprite",
+	"sid": 313814622625006,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 285,
+						"height": 43,
+						"originX": 0.5,
+						"originY": 0.4883720930232558,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3548729,
+						"collisionPoly": {
+							"points": [
+								0.021052631578947368,
+								0.023255813953488372,
+								0.9964912280701754,
+								0.13953488372093023,
+								0.9824561403508771,
+								0.9534883720930233,
+								0.0035087719298245615,
+								0.8604651162790697
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 807356666221688,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

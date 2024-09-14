@@ -1,0 +1,56 @@
+{
+	"name": "Spr_Game_Over_Pedra",
+	"plugin-id": "Sprite",
+	"sid": 670060598970537,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 859,
+						"height": 795,
+						"originX": 0.5413271245634459,
+						"originY": 0.49748427672955975,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2540868,
+						"collisionPoly": {
+							"points": [
+								0.03841676367869616,
+								0.0025157232704402536,
+								0.9965075669383003,
+								0.04025157232704402,
+								0.9965075669383003,
+								0.2729559748427673,
+								0.8172293364377182,
+								0.9987421383647799,
+								0.1769499417927823,
+								0.9962264150943396,
+								0.14435389988358557,
+								0.9622641509433962,
+								0.0034924330616996507,
+								0.2729559748427673
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 582393307282472,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

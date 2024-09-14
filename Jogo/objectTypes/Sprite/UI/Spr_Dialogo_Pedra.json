@@ -1,0 +1,50 @@
+{
+	"name": "Spr_Dialogo_Pedra",
+	"plugin-id": "Sprite",
+	"sid": 637331980084504,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 287,
+						"height": 41,
+						"originX": 0.5,
+						"originY": 0.4878048780487805,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7043328,
+						"collisionPoly": {
+							"points": [
+								0.003484320557491289,
+								0.024390243902439025,
+								0.9965156794425087,
+								0.024390243902439025,
+								0.9965156794425087,
+								0.975609756097561,
+								0.003484320557491289,
+								0.975609756097561
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 415446336675951,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

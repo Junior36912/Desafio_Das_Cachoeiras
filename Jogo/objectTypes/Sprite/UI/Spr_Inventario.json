@@ -1,0 +1,50 @@
+{
+	"name": "Spr_Inventario",
+	"plugin-id": "Sprite",
+	"sid": 977677414996513,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 202,
+						"height": 201,
+						"originX": 0.5173267326732673,
+						"originY": 0.5024875621890548,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8223507,
+						"collisionPoly": {
+							"points": [
+								0.023353422298751605,
+								0.003021541507124059,
+								0.9930047352561343,
+								0.02146336380922612,
+								0.9792832544123977,
+								0.9973431272954598,
+								0.005058114507102878,
+								0.9835117605688833
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 468000026031333,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

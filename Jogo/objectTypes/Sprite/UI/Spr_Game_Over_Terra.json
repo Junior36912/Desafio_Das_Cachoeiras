@@ -1,0 +1,60 @@
+{
+	"name": "Spr_Game_Over_Terra",
+	"plugin-id": "Sprite",
+	"sid": 156140570668588,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 323,
+						"height": 300,
+						"originX": 0.5242718446601942,
+						"originY": 0.5045691906005222,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9304802,
+						"collisionPoly": {
+							"points": [
+								0.03519417475728155,
+								0.0039164490861618795,
+								0.9648058252427184,
+								0.0039164490861618795,
+								0.9963592233009708,
+								0.037859007832898174,
+								0.9963592233009708,
+								0.2741514360313316,
+								0.8543689320388349,
+								0.9621409921671018,
+								0.8216019417475728,
+								0.9973890339425587,
+								0.14563106796116504,
+								0.9608355091383812,
+								0.0036407766990291263,
+								0.2741514360313316,
+								0.0036407766990291263,
+								0.037859007832898174
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 916647215150905,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

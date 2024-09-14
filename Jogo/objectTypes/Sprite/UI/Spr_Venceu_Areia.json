@@ -1,0 +1,52 @@
+{
+	"name": "Spr_Venceu_Areia",
+	"plugin-id": "Sprite",
+	"sid": 643349823817755,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 323,
+						"height": 322,
+						"originX": 0.5108359133126935,
+						"originY": 0.5279503105590062,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1604424,
+						"collisionPoly": {
+							"points": [
+								0.0407185487763246,
+								0.0015084294587400233,
+								1,
+								0.040727595385980475,
+								1,
+								0.24738243123336287,
+								0.8182203439710886,
+								0.9985803016858917,
+								0.14770038493684448,
+								0.9623779946761314
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 148255095777554,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

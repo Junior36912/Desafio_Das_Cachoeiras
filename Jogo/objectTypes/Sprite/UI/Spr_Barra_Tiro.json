@@ -1,0 +1,50 @@
+{
+	"name": "Spr_Barra_Tiro",
+	"plugin-id": "Sprite",
+	"sid": 474482796334187,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 49,
+						"height": 5,
+						"originX": 0.4897959183673469,
+						"originY": 0.4,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1845536,
+						"collisionPoly": {
+							"points": [
+								0.02040816326530612,
+								0.8,
+								0.02040816326530612,
+								0.20000000000002272,
+								0.9795918367346939,
+								0.20000000000002272,
+								0.9795918367346939,
+								0.8
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 520869690160425,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

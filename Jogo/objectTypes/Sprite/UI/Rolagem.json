@@ -1,0 +1,66 @@
+{
+	"name": "Rolagem",
+	"plugin-id": "Sprite",
+	"sid": 630464524495819,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "scrollto",
+			"name": "CentrarEm",
+			"sid": 743733774776780
+		},
+		{
+			"behaviorId": "TileMovement",
+			"name": "MovimentoEmGrid",
+			"sid": 542550896300806
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 325756840543449
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2161117,
+						"collisionPoly": {
+							"points": [
+								0.15600006644509265,
+								0.1440004271536309,
+								0.8959999557032717,
+								0.15599978670061684,
+								0.8920001691876095,
+								0.8679999114990204,
+								0.1359997351444035,
+								0.8680001912434965
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 807712399798141,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"name": "Spr_Venceu_Terra",
+	"plugin-id": "Sprite",
+	"sid": 132439597041440,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 323,
+						"height": 320,
+						"originX": 0.553921568627451,
+						"originY": 0.4888888888888889,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 969212,
+						"collisionPoly": {
+							"points": [
+								0.08867883228497038,
+								0.002522812667740201,
+								0.9955703785627059,
+								0.035144927536231885,
+								0.9955703785627059,
+								0.2546027911969941,
+								0.8186159305085137,
+								0.9989801395598497,
+								0.14766364830303447,
+								0.9619095544820182,
+								0.006100089859680649,
+								0.25163714439076756
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 573618139803167,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

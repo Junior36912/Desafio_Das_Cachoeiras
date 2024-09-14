@@ -1,0 +1,70 @@
+{
+	"name": "Spr_Mochila",
+	"plugin-id": "Sprite",
+	"sid": 616959901320010,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "TileMovement",
+			"name": "MovimentoEmGrid",
+			"sid": 482178748390346
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 55,
+						"height": 46,
+						"originX": 0.509090909090909,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1738592,
+						"collisionPoly": {
+							"points": [
+								0.5272727272727272,
+								0.021739130434782608,
+								0.7272727272727273,
+								0.2608695652173913,
+								0.8727272727272727,
+								0.717391304347826,
+								0.8909090909090909,
+								0.8043478260869565,
+								0.8727272727272727,
+								0.9130434782608695,
+								0.7636363636363637,
+								0.9347826086956522,
+								0.23636363636363636,
+								0.9347826086956522,
+								0.09090909090909091,
+								0.8695652173913043,
+								0.09090909090909091,
+								0.8043478260869565,
+								0.2727272727272727,
+								0.2608695652173913,
+								0.43636363636363634,
+								0.06521739130434782
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 685898634012433,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
